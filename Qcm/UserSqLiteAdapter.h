@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "User.h"
 @interface UserSqLiteAdapter : NSObject
+
+-(void)insert:(User*)user;
+-(NSArray*) getAll;
+-(NSManagedObject*)getById:(NSManagedObject *)user;
+-(void)update:(NSManagedObject*)managedObject withUser:(User*)user;
+-(void)remove:(NSManagedObject*)managedObject;
 
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Qcm.h"
 
 @interface QcmSqLiteAdapter : NSObject
+
+-(void)insert:(Qcm*)qcm;
+-(NSArray*) getAll;
+-(NSManagedObject*)getById:(NSManagedObject *)qcm;
+-(void)update:(NSManagedObject*)managedObject withQcm:(Qcm*)qcm;
+-(void)remove:(NSManagedObject*)managedObject;
 
 @end

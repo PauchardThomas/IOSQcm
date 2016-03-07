@@ -25,6 +25,7 @@
 		ECFCF3031C8DB02300086129 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3021C8DB02300086129 /* Question.m */; };
 		ECFCF3061C8DB02E00086129 /* Proposal.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3051C8DB02E00086129 /* Proposal.m */; };
 		ECFCF3091C8DB03A00086129 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3081C8DB03A00086129 /* User.m */; };
+		ECFCF30C1C8DC3D300086129 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF30A1C8DC3D300086129 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		ECFCF3051C8DB02E00086129 /* Proposal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Proposal.m; sourceTree = "<group>"; };
 		ECFCF3071C8DB03A00086129 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		ECFCF3081C8DB03A00086129 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		ECFCF30B1C8DC3D300086129 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,8 @@
 		ECFCF2C11C8DAE2100086129 /* Qcm */ = {
 			isa = PBXGroup;
 			children = (
+				ECFCF30D1C8DC6DF00086129 /* Controllers */,
+				ECFCF30A1C8DC3D300086129 /* Model.xcdatamodeld */,
 				ECFCF2FA1C8DAFA700086129 /* Entity */,
 				ECFCF2EA1C8DAE2E00086129 /* Data */,
 				ECFCF2C51C8DAE2100086129 /* AppDelegate.h */,
@@ -178,6 +182,13 @@
 				ECFCF3081C8DB03A00086129 /* User.m */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		ECFCF30D1C8DC6DF00086129 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 			files = (
 				ECFCF2CA1C8DAE2100086129 /* ViewController.m in Sources */,
 				ECFCF2F01C8DAEA400086129 /* QcmSqLiteAdapter.m in Sources */,
+				ECFCF30C1C8DC3D300086129 /* Model.xcdatamodeld in Sources */,
 				ECFCF2D01C8DAE2100086129 /* Qcm.xcdatamodeld in Sources */,
 				ECFCF3001C8DB01700086129 /* Category.m in Sources */,
 				ECFCF2ED1C8DAE7F00086129 /* CategorySqLiteAdapter.m in Sources */,
@@ -501,6 +513,17 @@
 			);
 			currentVersion = ECFCF2CF1C8DAE2100086129 /* Qcm.xcdatamodel */;
 			path = Qcm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		ECFCF30A1C8DC3D300086129 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECFCF30B1C8DC3D300086129 /* Model.xcdatamodel */,
+			);
+			currentVersion = ECFCF30B1C8DC3D300086129 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

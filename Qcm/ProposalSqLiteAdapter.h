@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Proposal.h"
 
 @interface ProposalSqLiteAdapter : NSObject
+
+-(void)insert:(Proposal*)proposal;
+-(NSArray*) getAll;
+-(NSManagedObject*)getById:(NSManagedObject *)proposal;
+-(void)update:(NSManagedObject*)managedObject withProposal:(Proposal*)proposal;
+-(void)remove:(NSManagedObject*)managedObject;
 
 @end

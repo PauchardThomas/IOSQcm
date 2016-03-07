@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Question.h"
 @interface QuestionSqLiteAdapter : NSObject
+
+-(void)insert:(Question*)question;
+-(NSArray*) getAll;
+-(NSManagedObject*)getById:(NSManagedObject *)question;
+-(void)update:(NSManagedObject*)managedObject withQuestion:(Question*)question;
+-(void)remove:(NSManagedObject*)managedObject;
 
 @end

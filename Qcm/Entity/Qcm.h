@@ -17,7 +17,7 @@
 @property(strong) NSDate* datePubli;
 @property(strong) NSDate* dateFin;
 @property(strong) NSNumber* nbPoints;
-@property(strong) EntityCategory* categgory;
+@property(strong) EntityCategory* category;
 
 
 @end

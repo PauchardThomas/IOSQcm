@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+    <entity name="Category" syncable="YES">
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Proposal" syncable="YES">
+        <attribute name="isAnswer" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="Qcm" syncable="YES">
+        <attribute name="dateFin" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="datePubli" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nbPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Question" syncable="YES">
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="points" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Qcm" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-56" positionY="-18" width="128" height="58"/>
+        <element name="Qcm" positionX="-243" positionY="-45" width="128" height="118"/>
+        <element name="Question" positionX="-243" positionY="126" width="128" height="90"/>
+        <element name="Proposal" positionX="-54" positionY="117" width="128" height="90"/>
+        <element name="User" positionX="-108" positionY="99" width="128" height="75"/>
+    </elements>
+</model>
