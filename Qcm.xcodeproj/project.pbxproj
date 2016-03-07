@@ -15,6 +15,16 @@
 		ECFCF2D21C8DAE2100086129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFCF2D11C8DAE2100086129 /* Assets.xcassets */; };
 		ECFCF2D51C8DAE2100086129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFCF2D31C8DAE2100086129 /* LaunchScreen.storyboard */; };
 		ECFCF2E01C8DAE2200086129 /* QcmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2DF1C8DAE2200086129 /* QcmTests.m */; };
+		ECFCF2ED1C8DAE7F00086129 /* CategorySqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2EC1C8DAE7F00086129 /* CategorySqLiteAdapter.m */; };
+		ECFCF2F01C8DAEA400086129 /* QcmSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2EF1C8DAEA400086129 /* QcmSqLiteAdapter.m */; };
+		ECFCF2F31C8DAF1C00086129 /* ProposalSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2F21C8DAF1C00086129 /* ProposalSqLiteAdapter.m */; };
+		ECFCF2F61C8DAF5200086129 /* QuestionSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2F51C8DAF5200086129 /* QuestionSqLiteAdapter.m */; };
+		ECFCF2F91C8DAF9300086129 /* UserSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2F81C8DAF9300086129 /* UserSqLiteAdapter.m */; };
+		ECFCF2FD1C8DB00100086129 /* Qcm.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2FC1C8DB00100086129 /* Qcm.m */; };
+		ECFCF3001C8DB01700086129 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2FF1C8DB01700086129 /* Category.m */; };
+		ECFCF3031C8DB02300086129 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3021C8DB02300086129 /* Question.m */; };
+		ECFCF3061C8DB02E00086129 /* Proposal.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3051C8DB02E00086129 /* Proposal.m */; };
+		ECFCF3091C8DB03A00086129 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3081C8DB03A00086129 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,26 @@
 		ECFCF2DB1C8DAE2200086129 /* QcmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QcmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFCF2DF1C8DAE2200086129 /* QcmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QcmTests.m; sourceTree = "<group>"; };
 		ECFCF2E11C8DAE2200086129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFCF2EB1C8DAE7F00086129 /* CategorySqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF2EC1C8DAE7F00086129 /* CategorySqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF2EE1C8DAEA400086129 /* QcmSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QcmSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF2EF1C8DAEA400086129 /* QcmSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QcmSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF2F11C8DAF1C00086129 /* ProposalSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProposalSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF2F21C8DAF1C00086129 /* ProposalSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProposalSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF2F41C8DAF5200086129 /* QuestionSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF2F51C8DAF5200086129 /* QuestionSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF2F71C8DAF9300086129 /* UserSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF2F81C8DAF9300086129 /* UserSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF2FB1C8DB00100086129 /* Qcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qcm.h; path = Entity/Qcm.h; sourceTree = "<group>"; };
+		ECFCF2FC1C8DB00100086129 /* Qcm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Qcm.m; path = Entity/Qcm.m; sourceTree = "<group>"; };
+		ECFCF2FE1C8DB01700086129 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		ECFCF2FF1C8DB01700086129 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		ECFCF3011C8DB02300086129 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		ECFCF3021C8DB02300086129 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		ECFCF3041C8DB02E00086129 /* Proposal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Proposal.h; sourceTree = "<group>"; };
+		ECFCF3051C8DB02E00086129 /* Proposal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Proposal.m; sourceTree = "<group>"; };
+		ECFCF3071C8DB03A00086129 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		ECFCF3081C8DB03A00086129 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +113,8 @@
 		ECFCF2C11C8DAE2100086129 /* Qcm */ = {
 			isa = PBXGroup;
 			children = (
+				ECFCF2FA1C8DAFA700086129 /* Entity */,
+				ECFCF2EA1C8DAE2E00086129 /* Data */,
 				ECFCF2C51C8DAE2100086129 /* AppDelegate.h */,
 				ECFCF2C61C8DAE2100086129 /* AppDelegate.m */,
 				ECFCF2C81C8DAE2100086129 /* ViewController.h */,
@@ -112,6 +144,40 @@
 				ECFCF2E11C8DAE2200086129 /* Info.plist */,
 			);
 			path = QcmTests;
+			sourceTree = "<group>";
+		};
+		ECFCF2EA1C8DAE2E00086129 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ECFCF2EB1C8DAE7F00086129 /* CategorySqLiteAdapter.h */,
+				ECFCF2EC1C8DAE7F00086129 /* CategorySqLiteAdapter.m */,
+				ECFCF2EE1C8DAEA400086129 /* QcmSqLiteAdapter.h */,
+				ECFCF2EF1C8DAEA400086129 /* QcmSqLiteAdapter.m */,
+				ECFCF2F11C8DAF1C00086129 /* ProposalSqLiteAdapter.h */,
+				ECFCF2F21C8DAF1C00086129 /* ProposalSqLiteAdapter.m */,
+				ECFCF2F41C8DAF5200086129 /* QuestionSqLiteAdapter.h */,
+				ECFCF2F51C8DAF5200086129 /* QuestionSqLiteAdapter.m */,
+				ECFCF2F71C8DAF9300086129 /* UserSqLiteAdapter.h */,
+				ECFCF2F81C8DAF9300086129 /* UserSqLiteAdapter.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		ECFCF2FA1C8DAFA700086129 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ECFCF2FB1C8DB00100086129 /* Qcm.h */,
+				ECFCF2FC1C8DB00100086129 /* Qcm.m */,
+				ECFCF2FE1C8DB01700086129 /* Category.h */,
+				ECFCF2FF1C8DB01700086129 /* Category.m */,
+				ECFCF3011C8DB02300086129 /* Question.h */,
+				ECFCF3021C8DB02300086129 /* Question.m */,
+				ECFCF3041C8DB02E00086129 /* Proposal.h */,
+				ECFCF3051C8DB02E00086129 /* Proposal.m */,
+				ECFCF3071C8DB03A00086129 /* User.h */,
+				ECFCF3081C8DB03A00086129 /* User.m */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +281,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECFCF2CA1C8DAE2100086129 /* ViewController.m in Sources */,
+				ECFCF2F01C8DAEA400086129 /* QcmSqLiteAdapter.m in Sources */,
 				ECFCF2D01C8DAE2100086129 /* Qcm.xcdatamodeld in Sources */,
+				ECFCF3001C8DB01700086129 /* Category.m in Sources */,
+				ECFCF2ED1C8DAE7F00086129 /* CategorySqLiteAdapter.m in Sources */,
+				ECFCF2F31C8DAF1C00086129 /* ProposalSqLiteAdapter.m in Sources */,
+				ECFCF3061C8DB02E00086129 /* Proposal.m in Sources */,
+				ECFCF2FD1C8DB00100086129 /* Qcm.m in Sources */,
+				ECFCF3091C8DB03A00086129 /* User.m in Sources */,
+				ECFCF2F61C8DAF5200086129 /* QuestionSqLiteAdapter.m in Sources */,
+				ECFCF2F91C8DAF9300086129 /* UserSqLiteAdapter.m in Sources */,
+				ECFCF3031C8DB02300086129 /* Question.m in Sources */,
 				ECFCF2C71C8DAE2100086129 /* AppDelegate.m in Sources */,
 				ECFCF2C41C8DAE2100086129 /* main.m in Sources */,
 			);
