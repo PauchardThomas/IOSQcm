@@ -16,8 +16,11 @@
 @property(strong) NSString* libelle;
 @property(strong) NSDate* datePubli;
 @property(strong) NSDate* dateFin;
+@property(strong) NSDate* duration;
 @property(strong) NSNumber* nbPoints;
+@property int id_server;
 @property(strong) EntityCategory* category;
+@property(strong) NSMutableArray* questions;
 
 
 @end

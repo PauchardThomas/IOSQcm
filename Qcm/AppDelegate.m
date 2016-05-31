@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Category.h"
+#import "CategoryWSAdapter.h"
+#import "CategorySqLiteAdapter.h"
+#import "UserWSAdapter.h"
+#import "UserSqLiteAdapter.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +20,60 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    void (^callback)(NSMutableArray*) = ^(NSMutableArray* categories) {
+        
+        if(categories != nil){
+            for (EntityCategory* cat in categories) {
+                
+                CategorySqLiteAdapter* adapter = [CategorySqLiteAdapter new];
+                [adapter insert:cat];
+               
+                NSLog(@"id : %d libelle :%@ ",cat.id_server,cat.libelle);
+            }
+        }
+    };
+    
+    void (^callbackUser)(User*) = ^(User* user) {
+        
+        
+        UserSqLiteAdapter* userAdapter = [UserSqLiteAdapter new ];
+        
+        //test if user already exist
+        NSManagedObject* isUserExist = [userAdapter getByIdServer:user.id_server];
+        
+        if(isUserExist.managedObjectContext == nil){
+            User* usertest = (User*) isUserExist;
+            NSLog(@"%@",usertest.username);
+        }else {
+            NSLog(@"User existe déjà");
+            NSManagedObjectID* idInserted = [userAdapter insert:user];
+            NSLog(@"%@",idInserted);
+            user.id = idInserted;
+        }
+    };
+    
+    
+    CategoryWSAdapter* adapter = [CategoryWSAdapter new];
+    [adapter getCategories:callback];
+    
+    //UserWSAdapter* userdapater = [UserWSAdapter new ];
+    //[userdapater loginuser:callbackUser];
+    
+    
+   /* EntityCategory* cate = [EntityCategory new];
+    cate.libelle = @"Ma 1ere cate";
+    cate.id_server = 10;
+    CategorySqLiteAdapter* adapter = [CategorySqLiteAdapter new];
+    [adapter insert:cate];*/
+    
+    
+ /*   WeatherWSAdapter* adapter = [WeatherWSAdapter new];
+    [adapter getWheater:^(Weather * weather) {
+        // on peut enregistre en bdd
+        NSLog(weather.description);
+    }];*/
+    
     return YES;
 }
 

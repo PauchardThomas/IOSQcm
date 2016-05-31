@@ -10,7 +10,12 @@
 #import "Question.h"
 @interface QuestionSqLiteAdapter : NSObject
 
--(void)insert:(Question*)question;
++(NSString*) ENTITY_QUESTION;
++(NSString*) COL_LIBELLE;
++(NSString*) COL_POINTS;
++(NSString*) COL_ID_QCM;
+
+-(NSManagedObject*)insert:(Question*)question;
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)question;
 -(void)update:(NSManagedObject*)managedObject withQuestion:(Question*)question;

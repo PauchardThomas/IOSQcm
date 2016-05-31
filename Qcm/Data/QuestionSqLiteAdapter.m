@@ -11,20 +11,28 @@
 
 @implementation QuestionSqLiteAdapter
 
--(void)insert:(Question*)question{
++(NSString*) ENTITY_QUESTION{return @"Question";}
++(NSString*) COL_LIBELLE{return @"libelle";}
++(NSString*) COL_POINTS{return @"points";}
++(NSString*) COL_ID_QCM{return @"id_qcm";}
++(NSString*) COL_ID_SERVER{return @"id_server";}
+
+-(NSManagedObject*)insert:(Question*)question{
     
     AppDelegate *appDelegate =[[UIApplication sharedApplication]delegate];
     NSManagedObjectContext* context =appDelegate.managedObjectContext;
     
     //get table
-    NSManagedObject* managedObject= [NSEntityDescription insertNewObjectForEntityForName:@"Question" inManagedObjectContext:context];
+    NSManagedObject* managedObject= [NSEntityDescription insertNewObjectForEntityForName:QuestionSqLiteAdapter.ENTITY_QUESTION inManagedObjectContext:context];
     
     //Insert table
-    [managedObject setValue:question.libelle forKey:@"libelle"];
-    [managedObject setValue:question.points forKey:@"points"];
-    [managedObject setValue:question.qcm.id forKey:@"id_qcm"];
-    
+    [managedObject setValue:question.libelle forKey:QuestionSqLiteAdapter.COL_LIBELLE];
+    [managedObject setValue:question.points forKey:QuestionSqLiteAdapter.COL_POINTS];
+    [managedObject setValue:question.qcm.id forKey:QuestionSqLiteAdapter.COL_ID_QCM];
+    [managedObject setValue: [NSNumber numberWithInt:question.id_server] forKey:QuestionSqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
+    
+    return managedObject;
     
 }
 -(NSArray*) getAll {
@@ -40,7 +48,7 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
     
     //get table from request
-    fetchRequest.entity = [NSEntityDescription entityForName:@"Question"
+    fetchRequest.entity = [NSEntityDescription entityForName:QuestionSqLiteAdapter.ENTITY_QUESTION
                                       inManagedObjectContext:context];
     
     //get all cities db object
@@ -68,9 +76,9 @@
     NSManagedObjectContext* context =appDelegate.managedObjectContext;
     
     //update table
-    [managedObject setValue:question.libelle forKey:@"libelle"];
-    [managedObject setValue:question.points forKey:@"points"];
-    [managedObject setValue:question.qcm.id forKey:@"id_qcm"];
+    [managedObject setValue:question.libelle forKey:QuestionSqLiteAdapter.COL_LIBELLE];
+    [managedObject setValue:question.points forKey:QuestionSqLiteAdapter.COL_POINTS];
+    [managedObject setValue:question.qcm.id forKey:QuestionSqLiteAdapter.COL_ID_QCM];
     
     [appDelegate saveContext];
     

@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Durée : xx h xx min"; ObjectID = "194-9t-50D"; */
+"194-9t-50D.text" = "Durée : xx h xx min";
+
+/* Class = "UILabel"; text = "description"; ObjectID = "3zs-Qv-g5h"; */
+"3zs-Qv-g5h.text" = "description";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "6yv-mQ-9yV"; */
+"6yv-mQ-9yV.text" = "ID";
+
+/* Class = "UILabel"; text = "Qcm"; ObjectID = "Dzm-QZ-GUs"; */
+"Dzm-QZ-GUs.text" = "Qcm";
+
+/* Class = "UILabel"; text = "main"; ObjectID = "FBY-Jn-cOV"; */
+"FBY-Jn-cOV.text" = "main";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "IbE-75-hpR"; */
+"IbE-75-hpR.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "Lm6-ef-Tjv"; */
+"Lm6-ef-Tjv.text" = "Question";
+
+/* Class = "UIButton"; normalTitle = "Connexion"; ObjectID = "OZP-d0-TUu"; */
+"OZP-d0-TUu.normalTitle" = "Add";
+
+/* Class = "UITextField"; placeholder = "Login"; ObjectID = "cl2-bI-B15"; */
+"cl2-bI-B15.placeholder" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Commencer"; ObjectID = "yF1-Cf-ES4"; */
+"yF1-Cf-ES4.normalTitle" = "Commencer";

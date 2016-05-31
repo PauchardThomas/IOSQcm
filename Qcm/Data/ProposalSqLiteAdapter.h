@@ -11,7 +11,13 @@
 
 @interface ProposalSqLiteAdapter : NSObject
 
++(NSString*) ENTITY_PROPOSAL;
++(NSString*) COL_LIBELLE;
++(NSString*) COL_ISANSWER;
++(NSString*) COL_QUESTION;
++(NSString*) COL_ID_SERVER;
 -(void)insert:(Proposal*)proposal;
+-(void)insert:(Proposal*)proposal withQuestion:(NSManagedObject*)question;
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)proposal;
 -(void)update:(NSManagedObject*)managedObject withProposal:(Proposal*)proposal;

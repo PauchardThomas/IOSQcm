@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC7425E51CFB4D620034655F /* UserWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7425E41CFB4D620034655F /* UserWSAdapter.m */; };
+		ECED0C821C9037D0001837E3 /* QcmWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */; };
+		ECED0D411C905251001837E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECED0D431C905251001837E3 /* Localizable.strings */; };
+		ECEF459E1C8EC4650061C1FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45921C8EC4650061C1FD /* AFHTTPSessionManager.m */; };
+		ECEF459F1C8EC4650061C1FD /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45951C8EC4650061C1FD /* AFNetworkReachabilityManager.m */; };
+		ECEF45A01C8EC4650061C1FD /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45971C8EC4650061C1FD /* AFSecurityPolicy.m */; };
+		ECEF45A11C8EC4650061C1FD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45991C8EC4650061C1FD /* AFURLRequestSerialization.m */; };
+		ECEF45A21C8EC4650061C1FD /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF459B1C8EC4650061C1FD /* AFURLResponseSerialization.m */; };
+		ECEF45A31C8EC4650061C1FD /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF459D1C8EC4650061C1FD /* AFURLSessionManager.m */; };
+		ECEF45B91C8EC47E0061C1FD /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45A61C8EC47E0061C1FD /* AFAutoPurgingImageCache.m */; };
+		ECEF45BA1C8EC47E0061C1FD /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45A81C8EC47E0061C1FD /* AFImageDownloader.m */; };
+		ECEF45BB1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45AA1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m */; };
+		ECEF45BC1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45AC1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.m */; };
+		ECEF45BD1C8EC47E0061C1FD /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45AE1C8EC47E0061C1FD /* UIButton+AFNetworking.m */; };
+		ECEF45BE1C8EC47E0061C1FD /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45B11C8EC47E0061C1FD /* UIImageView+AFNetworking.m */; };
+		ECEF45BF1C8EC47E0061C1FD /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45B41C8EC47E0061C1FD /* UIProgressView+AFNetworking.m */; };
+		ECEF45C01C8EC47E0061C1FD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45B61C8EC47E0061C1FD /* UIRefreshControl+AFNetworking.m */; };
+		ECEF45C11C8EC47E0061C1FD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45B81C8EC47E0061C1FD /* UIWebView+AFNetworking.m */; };
+		ECEF45C51C8EC92D0061C1FD /* WeatherWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45C41C8EC92D0061C1FD /* WeatherWSAdapter.m */; };
+		ECEF45C81C8ECAAF0061C1FD /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45C71C8ECAAF0061C1FD /* Weather.m */; };
+		ECEF45CB1C8F125B0061C1FD /* CategoryWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45CA1C8F125B0061C1FD /* CategoryWSAdapter.m */; };
+		ECEF56A01CFE1F20003BF90C /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF569F1CFE1F20003BF90C /* CategoryViewController.m */; };
 		ECFCF2C41C8DAE2100086129 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2C31C8DAE2100086129 /* main.m */; };
 		ECFCF2C71C8DAE2100086129 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2C61C8DAE2100086129 /* AppDelegate.m */; };
 		ECFCF2CA1C8DAE2100086129 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2C91C8DAE2100086129 /* ViewController.m */; };
@@ -15,17 +37,17 @@
 		ECFCF2D21C8DAE2100086129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFCF2D11C8DAE2100086129 /* Assets.xcassets */; };
 		ECFCF2D51C8DAE2100086129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFCF2D31C8DAE2100086129 /* LaunchScreen.storyboard */; };
 		ECFCF2E01C8DAE2200086129 /* QcmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2DF1C8DAE2200086129 /* QcmTests.m */; };
-		ECFCF2ED1C8DAE7F00086129 /* CategorySqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2EC1C8DAE7F00086129 /* CategorySqLiteAdapter.m */; };
-		ECFCF2F01C8DAEA400086129 /* QcmSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2EF1C8DAEA400086129 /* QcmSqLiteAdapter.m */; };
-		ECFCF2F31C8DAF1C00086129 /* ProposalSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2F21C8DAF1C00086129 /* ProposalSqLiteAdapter.m */; };
-		ECFCF2F61C8DAF5200086129 /* QuestionSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2F51C8DAF5200086129 /* QuestionSqLiteAdapter.m */; };
-		ECFCF2F91C8DAF9300086129 /* UserSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2F81C8DAF9300086129 /* UserSqLiteAdapter.m */; };
 		ECFCF2FD1C8DB00100086129 /* Qcm.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2FC1C8DB00100086129 /* Qcm.m */; };
-		ECFCF3001C8DB01700086129 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2FF1C8DB01700086129 /* Category.m */; };
-		ECFCF3031C8DB02300086129 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3021C8DB02300086129 /* Question.m */; };
-		ECFCF3061C8DB02E00086129 /* Proposal.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3051C8DB02E00086129 /* Proposal.m */; };
-		ECFCF3091C8DB03A00086129 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3081C8DB03A00086129 /* User.m */; };
-		ECFCF30C1C8DC3D300086129 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF30A1C8DC3D300086129 /* Model.xcdatamodeld */; };
+		ECFCF3101C8DCED000086129 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF30F1C8DCED000086129 /* LoginViewController.m */; };
+		ECFCF31D1C8DDC4800086129 /* CategorySqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3141C8DDC4800086129 /* CategorySqLiteAdapter.m */; };
+		ECFCF31E1C8DDC4800086129 /* ProposalSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3161C8DDC4800086129 /* ProposalSqLiteAdapter.m */; };
+		ECFCF31F1C8DDC4800086129 /* QcmSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3181C8DDC4800086129 /* QcmSqLiteAdapter.m */; };
+		ECFCF3201C8DDC4800086129 /* QuestionSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF31A1C8DDC4800086129 /* QuestionSqLiteAdapter.m */; };
+		ECFCF3211C8DDC4800086129 /* UserSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF31C1C8DDC4800086129 /* UserSqLiteAdapter.m */; };
+		ECFCF32A1C8DDC9F00086129 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3231C8DDC9F00086129 /* Category.m */; };
+		ECFCF32B1C8DDC9F00086129 /* Proposal.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3251C8DDC9F00086129 /* Proposal.m */; };
+		ECFCF32C1C8DDC9F00086129 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3271C8DDC9F00086129 /* Question.m */; };
+		ECFCF32D1C8DDC9F00086129 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3291C8DDC9F00086129 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +61,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC7425E31CFB4D620034655F /* UserWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserWSAdapter.h; path = Webservice/UserWSAdapter.h; sourceTree = "<group>"; };
+		EC7425E41CFB4D620034655F /* UserWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserWSAdapter.m; path = Webservice/UserWSAdapter.m; sourceTree = "<group>"; };
+		ECED0C801C9037D0001837E3 /* QcmWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QcmWSAdapter.h; path = Webservice/QcmWSAdapter.h; sourceTree = "<group>"; };
+		ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QcmWSAdapter.m; path = Webservice/QcmWSAdapter.m; sourceTree = "<group>"; };
+		ECED0D3F1C9051E8001837E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		ECED0D401C9051E8001837E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ECED0D421C905251001837E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ECED0D441C90527B001837E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ECED0D471C90572A001837E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		ECEF45911C8EC4650061C1FD /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		ECEF45921C8EC4650061C1FD /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		ECEF45931C8EC4650061C1FD /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		ECEF45941C8EC4650061C1FD /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		ECEF45951C8EC4650061C1FD /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		ECEF45961C8EC4650061C1FD /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		ECEF45971C8EC4650061C1FD /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		ECEF45981C8EC4650061C1FD /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		ECEF45991C8EC4650061C1FD /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		ECEF459A1C8EC4650061C1FD /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		ECEF459B1C8EC4650061C1FD /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		ECEF459C1C8EC4650061C1FD /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		ECEF459D1C8EC4650061C1FD /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		ECEF45A51C8EC47E0061C1FD /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
+		ECEF45A61C8EC47E0061C1FD /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
+		ECEF45A71C8EC47E0061C1FD /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
+		ECEF45A81C8EC47E0061C1FD /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
+		ECEF45A91C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		ECEF45AA1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		ECEF45AB1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45AC1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		ECEF45AD1C8EC47E0061C1FD /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45AE1C8EC47E0061C1FD /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		ECEF45AF1C8EC47E0061C1FD /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45B01C8EC47E0061C1FD /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45B11C8EC47E0061C1FD /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		ECEF45B21C8EC47E0061C1FD /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45B31C8EC47E0061C1FD /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45B41C8EC47E0061C1FD /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		ECEF45B51C8EC47E0061C1FD /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45B61C8EC47E0061C1FD /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		ECEF45B71C8EC47E0061C1FD /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		ECEF45B81C8EC47E0061C1FD /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		ECEF45C31C8EC92D0061C1FD /* WeatherWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherWSAdapter.h; path = Webservice/WeatherWSAdapter.h; sourceTree = "<group>"; };
+		ECEF45C41C8EC92D0061C1FD /* WeatherWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherWSAdapter.m; path = Webservice/WeatherWSAdapter.m; sourceTree = "<group>"; };
+		ECEF45C61C8ECAAF0061C1FD /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weather.h; path = Entity/Weather.h; sourceTree = "<group>"; };
+		ECEF45C71C8ECAAF0061C1FD /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weather.m; path = Entity/Weather.m; sourceTree = "<group>"; };
+		ECEF45C91C8F125B0061C1FD /* CategoryWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryWSAdapter.h; path = Webservice/CategoryWSAdapter.h; sourceTree = "<group>"; };
+		ECEF45CA1C8F125B0061C1FD /* CategoryWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryWSAdapter.m; path = Webservice/CategoryWSAdapter.m; sourceTree = "<group>"; };
+		ECEF569E1CFE1F20003BF90C /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryViewController.h; path = Controller/CategoryViewController.h; sourceTree = "<group>"; };
+		ECEF569F1CFE1F20003BF90C /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewController.m; path = Controller/CategoryViewController.m; sourceTree = "<group>"; };
 		ECFCF2BF1C8DAE2100086129 /* Qcm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qcm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFCF2C31C8DAE2100086129 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECFCF2C51C8DAE2100086129 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,27 +125,28 @@
 		ECFCF2DB1C8DAE2200086129 /* QcmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QcmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFCF2DF1C8DAE2200086129 /* QcmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QcmTests.m; sourceTree = "<group>"; };
 		ECFCF2E11C8DAE2200086129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECFCF2EB1C8DAE7F00086129 /* CategorySqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySqLiteAdapter.h; sourceTree = "<group>"; };
-		ECFCF2EC1C8DAE7F00086129 /* CategorySqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySqLiteAdapter.m; sourceTree = "<group>"; };
-		ECFCF2EE1C8DAEA400086129 /* QcmSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QcmSqLiteAdapter.h; sourceTree = "<group>"; };
-		ECFCF2EF1C8DAEA400086129 /* QcmSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QcmSqLiteAdapter.m; sourceTree = "<group>"; };
-		ECFCF2F11C8DAF1C00086129 /* ProposalSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProposalSqLiteAdapter.h; sourceTree = "<group>"; };
-		ECFCF2F21C8DAF1C00086129 /* ProposalSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProposalSqLiteAdapter.m; sourceTree = "<group>"; };
-		ECFCF2F41C8DAF5200086129 /* QuestionSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSqLiteAdapter.h; sourceTree = "<group>"; };
-		ECFCF2F51C8DAF5200086129 /* QuestionSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSqLiteAdapter.m; sourceTree = "<group>"; };
-		ECFCF2F71C8DAF9300086129 /* UserSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSqLiteAdapter.h; sourceTree = "<group>"; };
-		ECFCF2F81C8DAF9300086129 /* UserSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSqLiteAdapter.m; sourceTree = "<group>"; };
 		ECFCF2FB1C8DB00100086129 /* Qcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qcm.h; path = Entity/Qcm.h; sourceTree = "<group>"; };
 		ECFCF2FC1C8DB00100086129 /* Qcm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Qcm.m; path = Entity/Qcm.m; sourceTree = "<group>"; };
-		ECFCF2FE1C8DB01700086129 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		ECFCF2FF1C8DB01700086129 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
-		ECFCF3011C8DB02300086129 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
-		ECFCF3021C8DB02300086129 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
-		ECFCF3041C8DB02E00086129 /* Proposal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Proposal.h; sourceTree = "<group>"; };
-		ECFCF3051C8DB02E00086129 /* Proposal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Proposal.m; sourceTree = "<group>"; };
-		ECFCF3071C8DB03A00086129 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		ECFCF3081C8DB03A00086129 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		ECFCF30B1C8DC3D300086129 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		ECFCF30E1C8DCED000086129 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controller/LoginViewController.h; sourceTree = "<group>"; };
+		ECFCF30F1C8DCED000086129 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controller/LoginViewController.m; sourceTree = "<group>"; };
+		ECFCF3131C8DDC4800086129 /* CategorySqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySqLiteAdapter.h; path = Data/CategorySqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF3141C8DDC4800086129 /* CategorySqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySqLiteAdapter.m; path = Data/CategorySqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF3151C8DDC4800086129 /* ProposalSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProposalSqLiteAdapter.h; path = Data/ProposalSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF3161C8DDC4800086129 /* ProposalSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProposalSqLiteAdapter.m; path = Data/ProposalSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF3171C8DDC4800086129 /* QcmSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QcmSqLiteAdapter.h; path = Data/QcmSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF3181C8DDC4800086129 /* QcmSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QcmSqLiteAdapter.m; path = Data/QcmSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF3191C8DDC4800086129 /* QuestionSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSqLiteAdapter.h; path = Data/QuestionSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF31A1C8DDC4800086129 /* QuestionSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSqLiteAdapter.m; path = Data/QuestionSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF31B1C8DDC4800086129 /* UserSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSqLiteAdapter.h; path = Data/UserSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECFCF31C1C8DDC4800086129 /* UserSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSqLiteAdapter.m; path = Data/UserSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECFCF3221C8DDC9F00086129 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = Entity/Category.h; sourceTree = "<group>"; };
+		ECFCF3231C8DDC9F00086129 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = Entity/Category.m; sourceTree = "<group>"; };
+		ECFCF3241C8DDC9F00086129 /* Proposal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Proposal.h; path = Entity/Proposal.h; sourceTree = "<group>"; };
+		ECFCF3251C8DDC9F00086129 /* Proposal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Proposal.m; path = Entity/Proposal.m; sourceTree = "<group>"; };
+		ECFCF3261C8DDC9F00086129 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = Entity/Question.h; sourceTree = "<group>"; };
+		ECFCF3271C8DDC9F00086129 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Entity/Question.m; sourceTree = "<group>"; };
+		ECFCF3281C8DDC9F00086129 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Entity/User.h; sourceTree = "<group>"; };
+		ECFCF3291C8DDC9F00086129 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Entity/User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +167,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECED0D3E1C90518C001837E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECED0D431C905251001837E3 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		ECEF458B1C8EC3040061C1FD /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF45A41C8EC47E0061C1FD /* UIKit+AFNetworking */,
+				ECEF45901C8EC4650061C1FD /* AFNetworking */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		ECEF45901C8EC4650061C1FD /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF45911C8EC4650061C1FD /* AFHTTPSessionManager.h */,
+				ECEF45921C8EC4650061C1FD /* AFHTTPSessionManager.m */,
+				ECEF45931C8EC4650061C1FD /* AFNetworking.h */,
+				ECEF45941C8EC4650061C1FD /* AFNetworkReachabilityManager.h */,
+				ECEF45951C8EC4650061C1FD /* AFNetworkReachabilityManager.m */,
+				ECEF45961C8EC4650061C1FD /* AFSecurityPolicy.h */,
+				ECEF45971C8EC4650061C1FD /* AFSecurityPolicy.m */,
+				ECEF45981C8EC4650061C1FD /* AFURLRequestSerialization.h */,
+				ECEF45991C8EC4650061C1FD /* AFURLRequestSerialization.m */,
+				ECEF459A1C8EC4650061C1FD /* AFURLResponseSerialization.h */,
+				ECEF459B1C8EC4650061C1FD /* AFURLResponseSerialization.m */,
+				ECEF459C1C8EC4650061C1FD /* AFURLSessionManager.h */,
+				ECEF459D1C8EC4650061C1FD /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			path = Libs/AFNetworking;
+			sourceTree = "<group>";
+		};
+		ECEF45A41C8EC47E0061C1FD /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF45A51C8EC47E0061C1FD /* AFAutoPurgingImageCache.h */,
+				ECEF45A61C8EC47E0061C1FD /* AFAutoPurgingImageCache.m */,
+				ECEF45A71C8EC47E0061C1FD /* AFImageDownloader.h */,
+				ECEF45A81C8EC47E0061C1FD /* AFImageDownloader.m */,
+				ECEF45A91C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.h */,
+				ECEF45AA1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m */,
+				ECEF45AB1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.h */,
+				ECEF45AC1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.m */,
+				ECEF45AD1C8EC47E0061C1FD /* UIButton+AFNetworking.h */,
+				ECEF45AE1C8EC47E0061C1FD /* UIButton+AFNetworking.m */,
+				ECEF45AF1C8EC47E0061C1FD /* UIImage+AFNetworking.h */,
+				ECEF45B01C8EC47E0061C1FD /* UIImageView+AFNetworking.h */,
+				ECEF45B11C8EC47E0061C1FD /* UIImageView+AFNetworking.m */,
+				ECEF45B21C8EC47E0061C1FD /* UIKit+AFNetworking.h */,
+				ECEF45B31C8EC47E0061C1FD /* UIProgressView+AFNetworking.h */,
+				ECEF45B41C8EC47E0061C1FD /* UIProgressView+AFNetworking.m */,
+				ECEF45B51C8EC47E0061C1FD /* UIRefreshControl+AFNetworking.h */,
+				ECEF45B61C8EC47E0061C1FD /* UIRefreshControl+AFNetworking.m */,
+				ECEF45B71C8EC47E0061C1FD /* UIWebView+AFNetworking.h */,
+				ECEF45B81C8EC47E0061C1FD /* UIWebView+AFNetworking.m */,
+			);
+			name = "UIKit+AFNetworking";
+			path = "Libs/UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		ECEF45C21C8EC8E20061C1FD /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF45C31C8EC92D0061C1FD /* WeatherWSAdapter.h */,
+				ECEF45C41C8EC92D0061C1FD /* WeatherWSAdapter.m */,
+				ECEF45C91C8F125B0061C1FD /* CategoryWSAdapter.h */,
+				ECEF45CA1C8F125B0061C1FD /* CategoryWSAdapter.m */,
+				ECED0C801C9037D0001837E3 /* QcmWSAdapter.h */,
+				ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */,
+				EC7425E31CFB4D620034655F /* UserWSAdapter.h */,
+				EC7425E41CFB4D620034655F /* UserWSAdapter.m */,
+			);
+			name = Webservice;
+			sourceTree = "<group>";
+		};
 		ECFCF2B61C8DAE2100086129 = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +269,10 @@
 		ECFCF2C11C8DAE2100086129 /* Qcm */ = {
 			isa = PBXGroup;
 			children = (
+				ECED0D3E1C90518C001837E3 /* Resources */,
+				ECEF45C21C8EC8E20061C1FD /* Webservice */,
+				ECEF458B1C8EC3040061C1FD /* Libs */,
 				ECFCF30D1C8DC6DF00086129 /* Controllers */,
-				ECFCF30A1C8DC3D300086129 /* Model.xcdatamodeld */,
 				ECFCF2FA1C8DAFA700086129 /* Entity */,
 				ECFCF2EA1C8DAE2E00086129 /* Data */,
 				ECFCF2C51C8DAE2100086129 /* AppDelegate.h */,
@@ -153,16 +309,16 @@
 		ECFCF2EA1C8DAE2E00086129 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				ECFCF2EB1C8DAE7F00086129 /* CategorySqLiteAdapter.h */,
-				ECFCF2EC1C8DAE7F00086129 /* CategorySqLiteAdapter.m */,
-				ECFCF2EE1C8DAEA400086129 /* QcmSqLiteAdapter.h */,
-				ECFCF2EF1C8DAEA400086129 /* QcmSqLiteAdapter.m */,
-				ECFCF2F11C8DAF1C00086129 /* ProposalSqLiteAdapter.h */,
-				ECFCF2F21C8DAF1C00086129 /* ProposalSqLiteAdapter.m */,
-				ECFCF2F41C8DAF5200086129 /* QuestionSqLiteAdapter.h */,
-				ECFCF2F51C8DAF5200086129 /* QuestionSqLiteAdapter.m */,
-				ECFCF2F71C8DAF9300086129 /* UserSqLiteAdapter.h */,
-				ECFCF2F81C8DAF9300086129 /* UserSqLiteAdapter.m */,
+				ECFCF3151C8DDC4800086129 /* ProposalSqLiteAdapter.h */,
+				ECFCF3161C8DDC4800086129 /* ProposalSqLiteAdapter.m */,
+				ECFCF3131C8DDC4800086129 /* CategorySqLiteAdapter.h */,
+				ECFCF3141C8DDC4800086129 /* CategorySqLiteAdapter.m */,
+				ECFCF31B1C8DDC4800086129 /* UserSqLiteAdapter.h */,
+				ECFCF31C1C8DDC4800086129 /* UserSqLiteAdapter.m */,
+				ECFCF3191C8DDC4800086129 /* QuestionSqLiteAdapter.h */,
+				ECFCF31A1C8DDC4800086129 /* QuestionSqLiteAdapter.m */,
+				ECFCF3171C8DDC4800086129 /* QcmSqLiteAdapter.h */,
+				ECFCF3181C8DDC4800086129 /* QcmSqLiteAdapter.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -170,16 +326,18 @@
 		ECFCF2FA1C8DAFA700086129 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				ECFCF3221C8DDC9F00086129 /* Category.h */,
+				ECFCF3231C8DDC9F00086129 /* Category.m */,
+				ECFCF3241C8DDC9F00086129 /* Proposal.h */,
+				ECFCF3251C8DDC9F00086129 /* Proposal.m */,
+				ECFCF3261C8DDC9F00086129 /* Question.h */,
+				ECFCF3271C8DDC9F00086129 /* Question.m */,
+				ECFCF3281C8DDC9F00086129 /* User.h */,
+				ECFCF3291C8DDC9F00086129 /* User.m */,
 				ECFCF2FB1C8DB00100086129 /* Qcm.h */,
 				ECFCF2FC1C8DB00100086129 /* Qcm.m */,
-				ECFCF2FE1C8DB01700086129 /* Category.h */,
-				ECFCF2FF1C8DB01700086129 /* Category.m */,
-				ECFCF3011C8DB02300086129 /* Question.h */,
-				ECFCF3021C8DB02300086129 /* Question.m */,
-				ECFCF3041C8DB02E00086129 /* Proposal.h */,
-				ECFCF3051C8DB02E00086129 /* Proposal.m */,
-				ECFCF3071C8DB03A00086129 /* User.h */,
-				ECFCF3081C8DB03A00086129 /* User.m */,
+				ECEF45C61C8ECAAF0061C1FD /* Weather.h */,
+				ECEF45C71C8ECAAF0061C1FD /* Weather.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -187,6 +345,10 @@
 		ECFCF30D1C8DC6DF00086129 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECFCF30E1C8DCED000086129 /* LoginViewController.h */,
+				ECFCF30F1C8DCED000086129 /* LoginViewController.m */,
+				ECEF569E1CFE1F20003BF90C /* CategoryViewController.h */,
+				ECEF569F1CFE1F20003BF90C /* CategoryViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +416,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = ECFCF2B61C8DAE2100086129;
 			productRefGroup = ECFCF2C01C8DAE2100086129 /* Products */;
@@ -272,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECFCF2D51C8DAE2100086129 /* LaunchScreen.storyboard in Resources */,
+				ECED0D411C905251001837E3 /* Localizable.strings in Resources */,
 				ECFCF2D21C8DAE2100086129 /* Assets.xcassets in Resources */,
 				ECFCF2CD1C8DAE2100086129 /* Main.storyboard in Resources */,
 			);
@@ -291,21 +455,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEF45BF1C8EC47E0061C1FD /* UIProgressView+AFNetworking.m in Sources */,
+				ECEF45C01C8EC47E0061C1FD /* UIRefreshControl+AFNetworking.m in Sources */,
+				ECEF45C11C8EC47E0061C1FD /* UIWebView+AFNetworking.m in Sources */,
 				ECFCF2CA1C8DAE2100086129 /* ViewController.m in Sources */,
-				ECFCF2F01C8DAEA400086129 /* QcmSqLiteAdapter.m in Sources */,
-				ECFCF30C1C8DC3D300086129 /* Model.xcdatamodeld in Sources */,
+				ECEF56A01CFE1F20003BF90C /* CategoryViewController.m in Sources */,
+				ECEF45BC1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				ECFCF31E1C8DDC4800086129 /* ProposalSqLiteAdapter.m in Sources */,
+				ECEF45BA1C8EC47E0061C1FD /* AFImageDownloader.m in Sources */,
 				ECFCF2D01C8DAE2100086129 /* Qcm.xcdatamodeld in Sources */,
-				ECFCF3001C8DB01700086129 /* Category.m in Sources */,
-				ECFCF2ED1C8DAE7F00086129 /* CategorySqLiteAdapter.m in Sources */,
-				ECFCF2F31C8DAF1C00086129 /* ProposalSqLiteAdapter.m in Sources */,
-				ECFCF3061C8DB02E00086129 /* Proposal.m in Sources */,
+				ECEF45A31C8EC4650061C1FD /* AFURLSessionManager.m in Sources */,
+				ECFCF32A1C8DDC9F00086129 /* Category.m in Sources */,
+				ECFCF31D1C8DDC4800086129 /* CategorySqLiteAdapter.m in Sources */,
+				ECFCF31F1C8DDC4800086129 /* QcmSqLiteAdapter.m in Sources */,
+				ECFCF3101C8DCED000086129 /* LoginViewController.m in Sources */,
+				ECEF459E1C8EC4650061C1FD /* AFHTTPSessionManager.m in Sources */,
+				ECEF45CB1C8F125B0061C1FD /* CategoryWSAdapter.m in Sources */,
 				ECFCF2FD1C8DB00100086129 /* Qcm.m in Sources */,
-				ECFCF3091C8DB03A00086129 /* User.m in Sources */,
-				ECFCF2F61C8DAF5200086129 /* QuestionSqLiteAdapter.m in Sources */,
-				ECFCF2F91C8DAF9300086129 /* UserSqLiteAdapter.m in Sources */,
-				ECFCF3031C8DB02300086129 /* Question.m in Sources */,
+				ECFCF3211C8DDC4800086129 /* UserSqLiteAdapter.m in Sources */,
+				ECEF45A01C8EC4650061C1FD /* AFSecurityPolicy.m in Sources */,
 				ECFCF2C71C8DAE2100086129 /* AppDelegate.m in Sources */,
+				ECEF45A11C8EC4650061C1FD /* AFURLRequestSerialization.m in Sources */,
+				ECEF45BE1C8EC47E0061C1FD /* UIImageView+AFNetworking.m in Sources */,
+				ECEF45C81C8ECAAF0061C1FD /* Weather.m in Sources */,
+				EC7425E51CFB4D620034655F /* UserWSAdapter.m in Sources */,
+				ECEF459F1C8EC4650061C1FD /* AFNetworkReachabilityManager.m in Sources */,
+				ECEF45C51C8EC92D0061C1FD /* WeatherWSAdapter.m in Sources */,
+				ECEF45A21C8EC4650061C1FD /* AFURLResponseSerialization.m in Sources */,
+				ECED0C821C9037D0001837E3 /* QcmWSAdapter.m in Sources */,
 				ECFCF2C41C8DAE2100086129 /* main.m in Sources */,
+				ECFCF32D1C8DDC9F00086129 /* User.m in Sources */,
+				ECFCF32C1C8DDC9F00086129 /* Question.m in Sources */,
+				ECEF45BB1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m in Sources */,
+				ECFCF32B1C8DDC9F00086129 /* Proposal.m in Sources */,
+				ECFCF3201C8DDC4800086129 /* QuestionSqLiteAdapter.m in Sources */,
+				ECEF45BD1C8EC47E0061C1FD /* UIButton+AFNetworking.m in Sources */,
+				ECEF45B91C8EC47E0061C1FD /* AFAutoPurgingImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,10 +513,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ECED0D431C905251001837E3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECED0D421C905251001837E3 /* en */,
+				ECED0D441C90527B001837E3 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		ECFCF2CB1C8DAE2100086129 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ECFCF2CC1C8DAE2100086129 /* Base */,
+				ECED0D3F1C9051E8001837E3 /* fr */,
+				ECED0D471C90572A001837E3 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -340,6 +536,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ECFCF2D41C8DAE2100086129 /* Base */,
+				ECED0D401C9051E8001837E3 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -494,6 +691,7 @@
 				ECFCF2E61C8DAE2200086129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECFCF2E71C8DAE2200086129 /* Build configuration list for PBXNativeTarget "QcmTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +700,7 @@
 				ECFCF2E91C8DAE2200086129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -513,17 +712,6 @@
 			);
 			currentVersion = ECFCF2CF1C8DAE2100086129 /* Qcm.xcdatamodel */;
 			path = Qcm.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		ECFCF30A1C8DC3D300086129 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				ECFCF30B1C8DC3D300086129 /* Model.xcdatamodel */,
-			);
-			currentVersion = ECFCF30B1C8DC3D300086129 /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

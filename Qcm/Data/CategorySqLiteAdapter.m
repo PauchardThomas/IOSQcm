@@ -12,18 +12,29 @@
 @implementation CategorySqLiteAdapter
 
 
++(NSString*) ENTITY_CATEGORY{return @"Category";}
++(NSString*) COL_LIBELLE{return @"libelle";}
++(NSString*) COL_ID_SERVER{return @"id_server";}
+
 -(void)insert:(EntityCategory*)category{
     
     AppDelegate *appDelegate =[[UIApplication sharedApplication]delegate];
     NSManagedObjectContext* context =appDelegate.managedObjectContext;
     
     //get table
-    NSManagedObject* managedObject= [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:context];
+    NSManagedObject* managedObject= [NSEntityDescription insertNewObjectForEntityForName:CategorySqLiteAdapter.ENTITY_CATEGORY inManagedObjectContext:context];
     
     //Insert table
-    [managedObject setValue:category.libelle forKey:@"libelle"];
+    [managedObject setValue:category.libelle forKey:CategorySqLiteAdapter.COL_LIBELLE];
+    [managedObject setValue: [NSNumber numberWithInt:category.id_server] forKey:CategorySqLiteAdapter.COL_ID_SERVER];
     
     [appDelegate saveContext];
+    
+    NSManagedObjectID *idInserted = managedObject.objectID;
+    NSLog(@"id inserted  %@: ",idInserted);
+
+    
+    
     
 }
 -(NSArray*) getAll {
@@ -39,7 +50,7 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
     
     //get table from request
-    fetchRequest.entity = [NSEntityDescription entityForName:@"Category"
+    fetchRequest.entity = [NSEntityDescription entityForName:CategorySqLiteAdapter.ENTITY_CATEGORY
                                       inManagedObjectContext:context];
     
     //get all cities db object
@@ -60,6 +71,29 @@
     return managedObject;
     
 }
+
+-(NSManagedObject*)getByIdServer:(EntityCategory*)category {
+    
+    //DB instance
+    AppDelegate *appDelegate =[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext* context =appDelegate.managedObjectContext;
+    
+    
+    //creat filter
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id_server = %i",category.id_server];
+    
+    //Create a query
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:CategorySqLiteAdapter.ENTITY_CATEGORY];
+    
+    //set the filter on the query
+    request.predicate = predicate;
+    
+    //execute query
+    NSManagedObject* managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
+    
+    return managedObject;
+    
+}
 -(void)update:(NSManagedObject*)managedObject withCategory:(EntityCategory*)category {
     
     //DB instance
@@ -67,8 +101,8 @@
     NSManagedObjectContext* context =appDelegate.managedObjectContext;
     
     //update table
-    [managedObject setValue:category.libelle forKey:@"libelle"];
-    
+    [managedObject setValue:category.libelle forKey:CategorySqLiteAdapter.COL_LIBELLE];
+    [managedObject setValue: [NSNumber numberWithInt:category.id_server] forKey:CategorySqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
     
 }

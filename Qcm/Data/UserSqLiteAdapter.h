@@ -10,9 +10,14 @@
 #import "User.h"
 @interface UserSqLiteAdapter : NSObject
 
--(void)insert:(User*)user;
++(NSString*) ENTITY_USER;
++(NSString*) COL_USERNAME;
++(NSString*) COL_PASSWORD;
+
+-(NSManagedObjectID*)insert:(User*)user;
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)user;
+-(NSManagedObject*)getByIdServer:(int)id_server;
 -(void)update:(NSManagedObject*)managedObject withUser:(User*)user;
 -(void)remove:(NSManagedObject*)managedObject;
 
