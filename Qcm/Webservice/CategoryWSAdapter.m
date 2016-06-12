@@ -13,13 +13,13 @@
 +(NSString*) JSON_LIBELLE{ return @"libelle";}
 +(NSString*) JSON_ID_SERVER {return @"id";}
 
--(void) getCategories:(void(^)(NSMutableArray*))callback{
+-(void) getCategories:(void(^)(NSMutableArray*))callback:(int)user_id{
     
     // Create session
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     
     //Create request
-    NSString* URL = @"http://192.168.1.39/qcm2/web/app_dev.php/api/categories/5";
+    NSString* URL = [NSString stringWithFormat:@"http://192.168.1.39/qcm2/web/app_dev.php/api/categories/%d",user_id];
     [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSLog(@"JSON : %@",responseObject);

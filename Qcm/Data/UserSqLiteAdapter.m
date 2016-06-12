@@ -94,6 +94,34 @@
     
 
 }
+-(NSManagedObject*)getBy:(NSString*)username:(NSString*)password {
+    
+    //DB instance
+    AppDelegate* appDelegate = [[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext* context = appDelegate.managedObjectContext;
+    
+    // create filter
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"username = %@ AND password = %@ ",username,password];
+    
+    //create query
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    
+    //set filter to query
+    request.predicate = predicate;
+    
+    //get by id server
+    NSManagedObject* managedObject = nil;
+    @try {
+        managedObject =[[context executeFetchRequest:request error:nil]objectAtIndex:0];
+        return managedObject;
+    }@catch(NSException* e) {
+        
+    }
+    
+    return managedObject;
+    
+    
+}
 -(void)update:(NSManagedObject*)managedObject withUser:(User*)user {
     
     //DB instance

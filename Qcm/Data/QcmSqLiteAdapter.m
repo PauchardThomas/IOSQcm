@@ -15,8 +15,9 @@
 +(NSString*) COL_LIBELLE{return @"libelle";}
 +(NSString*) COL_DATE_PUBLI{return @"datePubli";}
 +(NSString*) COL_DATE_FIN{return @"dateFin";}
++(NSString*) COL_DURATION{return @"duration";}
 +(NSString*) COL_NB_POINTS{return @"nbPoints";}
-+(NSString*) COL_ID_CATEGORY{return @"id_category";}
++(NSString*) COL_ID_CATEGORY{return @"category_id";}
 +(NSString*) COL_ID_SERVER{return @"id_server";}
 
 -(void)insert:(Qcm*)qcm{
@@ -31,9 +32,10 @@
     [managedObject setValue:qcm.libelle forKey:QcmSqLiteAdapter.COL_LIBELLE];
     [managedObject setValue:qcm.datePubli forKey:QcmSqLiteAdapter.COL_DATE_PUBLI];
     [managedObject setValue:qcm.dateFin forKey:QcmSqLiteAdapter.COL_DATE_FIN];
-    [managedObject setValue:qcm.nbPoints forKey:QcmSqLiteAdapter.COL_NB_POINTS];
-    [managedObject setValue:qcm.category.id forKey:QcmSqLiteAdapter.COL_ID_CATEGORY];
-    [managedObject setValue:[NSNumber numberWithInt:qcm.id_server]forKey:QcmSqLiteAdapter.COL_ID_SERVER];
+    [managedObject setValue:qcm.duration forKey:QcmSqLiteAdapter.COL_DURATION];
+    [managedObject setValue:[NSNumber numberWithInt:qcm.nbPoints] forKey:QcmSqLiteAdapter.COL_NB_POINTS];
+    [managedObject setValue:[NSNumber numberWithInt:qcm.category_id] forKey:QcmSqLiteAdapter.COL_ID_CATEGORY];
+    [managedObject setValue:[NSNumber numberWithInt:qcm.id_server] forKey:QcmSqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
     
 }
@@ -87,7 +89,13 @@
     
     //set the filter on the query
     request.predicate = predicate;
-    
+    @try {
+         NSManagedObject* managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@",exception.reason);
+    }
+
     //execute query
     NSManagedObject* managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
     
@@ -105,9 +113,10 @@
     [managedObject setValue:qcm.libelle forKey:QcmSqLiteAdapter.COL_LIBELLE];
     [managedObject setValue:qcm.datePubli forKey:QcmSqLiteAdapter.COL_DATE_PUBLI];
     [managedObject setValue:qcm.dateFin forKey:QcmSqLiteAdapter.COL_DATE_FIN];
-    [managedObject setValue:qcm.nbPoints forKey:QcmSqLiteAdapter.COL_NB_POINTS];
-    [managedObject setValue:qcm.category.id forKey:QcmSqLiteAdapter.COL_ID_CATEGORY];
-    [managedObject setValue:[NSNumber numberWithInt:qcm.id_server]forKey:QcmSqLiteAdapter.COL_ID_SERVER];
+    [managedObject setValue:[NSNumber numberWithInt:qcm.nbPoints] forKey:QcmSqLiteAdapter.COL_NB_POINTS];
+    [managedObject setValue:[NSNumber numberWithInt:qcm.id_server] forKey:QcmSqLiteAdapter.COL_ID_SERVER];
+    [managedObject setValue:[NSNumber numberWithInt:qcm.category_id] forKey:QcmSqLiteAdapter.COL_ID_CATEGORY];
+   
     [appDelegate saveContext];
     
 }

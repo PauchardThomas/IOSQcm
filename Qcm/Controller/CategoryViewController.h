@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
-@interface CategoryViewController : UIViewController
+#import "Category.h"
+@interface CategoryViewController : UITableViewController
 
 @property(strong) User* user;
+@property(strong) EntityCategory* category;
+@property (strong) NSArray* categories;
 @end

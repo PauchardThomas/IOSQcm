@@ -12,6 +12,8 @@
 #import "CategorySqLiteAdapter.h"
 #import "UserWSAdapter.h"
 #import "UserSqLiteAdapter.h"
+#import "QcmWSAdapter.h"
+#import "QcmSqLiteAdapter.h"
 @interface AppDelegate ()
 
 @end
@@ -21,18 +23,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    void (^callback)(NSMutableArray*) = ^(NSMutableArray* categories) {
-        
-        if(categories != nil){
-            for (EntityCategory* cat in categories) {
-                
-                CategorySqLiteAdapter* adapter = [CategorySqLiteAdapter new];
-                [adapter insert:cat];
-               
-                NSLog(@"id : %d libelle :%@ ",cat.id_server,cat.libelle);
-            }
-        }
-    };
     
     void (^callbackUser)(User*) = ^(User* user) {
         
@@ -42,24 +32,59 @@
         //test if user already exist
         NSManagedObject* isUserExist = [userAdapter getByIdServer:user.id_server];
         
-        if(isUserExist.managedObjectContext == nil){
-            User* usertest = (User*) isUserExist;
-            NSLog(@"%@",usertest.username);
-        }else {
-            NSLog(@"User existe déjà");
+       // if(isUserExist.managedObjectContext == nil){
+        //    User* usertest = (User*) isUserExist;
+          //  NSLog(@"%@",usertest.username);
+        //}else {
+          //  NSLog(@"User existe déjà");
             NSManagedObjectID* idInserted = [userAdapter insert:user];
             NSLog(@"%@",idInserted);
             user.id = idInserted;
+       // }
+    };
+    
+    void (^callbackQcm)(NSMutableArray*) = ^(NSMutableArray* qcms) {
+        
+        if(qcms != nil){
+            for (Qcm* qcm in qcms) {
+                
+                QcmSqLiteAdapter* adapter = [QcmSqLiteAdapter new];
+               // CategorySqLiteAdapter* catadapter = [CategorySqLiteAdapter new ];
+               // NSManagedObject* isQcmExist =[adapter getByIdServer:qcm];
+                //if(isQcmExist.managedObjectContext == nil){
+                    [adapter insert:qcm];
+                //} else{
+                //    [adapter update:isQcmExist withQcm:qcm];
+               // }
+            }
+        }
+    };
+    
+    void (^callback)(NSMutableArray*) = ^(NSMutableArray* categories) {
+        
+        if(categories != nil){
+            for (EntityCategory* cat in categories) {
+                
+                CategorySqLiteAdapter* adapter = [CategorySqLiteAdapter new];
+               // NSManagedObject* isCatExist =[adapter getByIdServer:cat];
+               // if(isCatExist.managedObjectContext == nil){
+                    [adapter insert:cat];
+               // } else{
+                //    [adapter update:isCatExist withCategory:cat];
+                //}
+            }
         }
     };
     
     
-    CategoryWSAdapter* adapter = [CategoryWSAdapter new];
-    [adapter getCategories:callback];
+    CategoryWSAdapter* categoryWSAdatper = [CategoryWSAdapter new];
+    [categoryWSAdatper getCategories:callback:5];
     
-    //UserWSAdapter* userdapater = [UserWSAdapter new ];
-    //[userdapater loginuser:callbackUser];
+    UserWSAdapter* userdapater = [UserWSAdapter new ];
+    [userdapater loginuser:callbackUser :@"admin" :@"admin"];
     
+    QcmWSAdapter* qcmWSAdapter = [QcmWSAdapter new ];
+    [qcmWSAdapter getQcms:callbackQcm :2];
     
    /* EntityCategory* cate = [EntityCategory new];
     cate.libelle = @"Ma 1ere cate";

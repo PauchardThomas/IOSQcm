@@ -10,7 +10,7 @@
 #import "User.h"
 @interface UserWSAdapter : NSObject
 
--(void) loginuser:(void(^)(User*))callbackUser:(NSString*)username:(NSString*)password;
+-(User*) loginuser:(void(^)(User*))callbackUser:(NSString*)username:(NSString*)password;
 -(User*) extract:(NSDictionary* )json;
 +(NSString*) JSON_USERNAME;
 +(NSString*) JSON_PASSWORD;

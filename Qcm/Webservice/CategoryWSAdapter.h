@@ -10,7 +10,7 @@
 #import "Category.h"
 @interface CategoryWSAdapter : NSObject
 
--(void) getCategories:(void(^)(NSMutableArray*))callback;
+-(void) getCategories:(void(^)(NSMutableArray*))callback:(int)user_id;
 -(NSMutableArray*) extract:(NSDictionary* )json;
 +(NSString*) JSON_LIBELLE;
 +(NSString*) JSON_ID_SERVER;

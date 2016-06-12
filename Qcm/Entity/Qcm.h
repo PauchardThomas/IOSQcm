@@ -17,9 +17,9 @@
 @property(strong) NSDate* datePubli;
 @property(strong) NSDate* dateFin;
 @property(strong) NSDate* duration;
-@property(strong) NSNumber* nbPoints;
+@property int nbPoints;
 @property int id_server;
-@property(strong) EntityCategory* category;
+@property int category_id;
 @property(strong) NSMutableArray* questions;
 
 

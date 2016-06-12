@@ -18,6 +18,7 @@
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)user;
 -(NSManagedObject*)getByIdServer:(int)id_server;
+-(NSManagedObject*)getBy:(NSString*)username:(NSString*)password;
 -(void)update:(NSManagedObject*)managedObject withUser:(User*)user;
 -(void)remove:(NSManagedObject*)managedObject;
 

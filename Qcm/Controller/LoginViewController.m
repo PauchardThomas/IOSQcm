@@ -77,21 +77,20 @@ User* usertosend;
             } else {
                 User* userExist = (User*) isUserExist;
                 
-                usertosend.id = userExist.id;
-                usertosend.username = userExist.username;
-                usertosend.password = userExist.password;
+                //usertosend.id = userExist.id;
+                //usertosend.username = userExist.username;
+                //usertosend.password = userExist.password;
             }
             
         };
         
         UserWSAdapter* userdapater = [UserWSAdapter new ];
-        [userdapater loginuser:callbackUser:loginLabel.text:PasswordLabel.text];
+        usertosend =[userdapater loginuser:callbackUser:loginLabel.text:PasswordLabel.text];
         
-        //UserSqLiteAdapter* userQqlLiteAdapter = [UserSqLiteAdapter new];
-        //[userQqlLiteAdapter getByIdServer:<#(int)#>]
+
         
         CategoryViewController* cc = [segue destinationViewController];
-        cc.user = usertosend;
+        //cc.user = usertosend;
         
     }
 }

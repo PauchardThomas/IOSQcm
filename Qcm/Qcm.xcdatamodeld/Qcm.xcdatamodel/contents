@@ -19,8 +19,10 @@
         <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerUser" inverseName="proposal_id" inverseEntity="AnswerUser" syncable="YES"/>
     </entity>
     <entity name="Qcm" syncable="YES">
+        <attribute name="category_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="datePubli" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="id_server" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nbPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -46,7 +48,7 @@
         <element name="AnswerUser" positionX="99" positionY="27" width="128" height="103"/>
         <element name="Category" positionX="-92" positionY="117" width="128" height="88"/>
         <element name="Proposal" positionX="268" positionY="-81" width="128" height="118"/>
-        <element name="Qcm" positionX="-90" positionY="-81" width="128" height="163"/>
+        <element name="Qcm" positionX="-90" positionY="-81" width="128" height="195"/>
         <element name="Question" positionX="81" positionY="-126" width="128" height="133"/>
         <element name="User" positionX="322" positionY="69" width="128" height="103"/>
     </elements>
