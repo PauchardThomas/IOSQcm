@@ -14,7 +14,7 @@
 +(NSString*) ENTITY_QUESTION{return @"Question";}
 +(NSString*) COL_LIBELLE{return @"libelle";}
 +(NSString*) COL_POINTS{return @"points";}
-+(NSString*) COL_ID_QCM{return @"id_qcm";}
++(NSString*) COL_ID_QCM{return @"qcm_id";}
 +(NSString*) COL_ID_SERVER{return @"id_server";}
 
 -(NSManagedObject*)insert:(Question*)question{
@@ -28,7 +28,7 @@
     //Insert table
     [managedObject setValue:question.libelle forKey:QuestionSqLiteAdapter.COL_LIBELLE];
     [managedObject setValue:question.points forKey:QuestionSqLiteAdapter.COL_POINTS];
-    [managedObject setValue:question.qcm.id forKey:QuestionSqLiteAdapter.COL_ID_QCM];
+    [managedObject setValue:[NSNumber numberWithInt:question.qcm.id_server] forKey:QuestionSqLiteAdapter.COL_ID_QCM];
     [managedObject setValue: [NSNumber numberWithInt:question.id_server] forKey:QuestionSqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
     

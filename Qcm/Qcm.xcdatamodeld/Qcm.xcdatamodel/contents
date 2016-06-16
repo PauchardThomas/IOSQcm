@@ -12,6 +12,7 @@
         <relationship name="qcms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Qcm" inverseName="category" inverseEntity="Qcm" syncable="YES"/>
     </entity>
     <entity name="Proposal" syncable="YES">
+        <attribute name="id_question" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="id_server" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="isAnwer" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,6 +35,7 @@
         <attribute name="id_server" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="points" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="qcm_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="proposals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Proposal" inverseName="question" inverseEntity="Proposal" syncable="YES"/>
         <relationship name="qcm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Qcm" inverseName="questions" inverseEntity="Qcm" syncable="YES"/>
         <relationship name="relationship2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerUser" inverseName="question_id" inverseEntity="AnswerUser" syncable="YES"/>
@@ -47,9 +49,9 @@
     <elements>
         <element name="AnswerUser" positionX="99" positionY="27" width="128" height="103"/>
         <element name="Category" positionX="-92" positionY="117" width="128" height="88"/>
-        <element name="Proposal" positionX="268" positionY="-81" width="128" height="118"/>
+        <element name="Proposal" positionX="268" positionY="-81" width="128" height="135"/>
         <element name="Qcm" positionX="-90" positionY="-81" width="128" height="195"/>
-        <element name="Question" positionX="81" positionY="-126" width="128" height="133"/>
+        <element name="Question" positionX="81" positionY="-126" width="128" height="150"/>
         <element name="User" positionX="322" positionY="69" width="128" height="103"/>
     </elements>
 </model>

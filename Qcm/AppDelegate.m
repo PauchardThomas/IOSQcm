@@ -14,6 +14,10 @@
 #import "UserSqLiteAdapter.h"
 #import "QcmWSAdapter.h"
 #import "QcmSqLiteAdapter.h"
+#import "Question.h"
+#import "Proposal.h"
+#import "QuestionSqLiteAdapter.h"
+#import "ProposalSqLiteAdapter.h"
 @interface AppDelegate ()
 
 @end
@@ -43,7 +47,7 @@
        // }
     };
     
-    void (^callbackQcm)(NSMutableArray*) = ^(NSMutableArray* qcms) {
+    void (^callbackQcms)(NSMutableArray*) = ^(NSMutableArray* qcms) {
         
         if(qcms != nil){
             for (Qcm* qcm in qcms) {
@@ -59,6 +63,29 @@
             }
         }
     };
+    
+     void (^callbackQcm)(Qcm*) = ^(Qcm* qcm) {
+         
+         //Set id to Qcm
+         QcmSqLiteAdapter *qcmSqlLiteAdapter = [QcmSqLiteAdapter new];
+         qcm.id = [[qcmSqlLiteAdapter getByIdServer:qcm] objectID];
+         
+         for(Question* question in [qcm questions]) {
+             
+             QuestionSqLiteAdapter* questionSqlLiteAdapter = [QuestionSqLiteAdapter new ];
+             question.qcm = qcm;
+             question.id = [[questionSqlLiteAdapter insert:question] objectID];
+             
+             for(Proposal* proposal in question.proposals) {
+                 proposal.question = question;
+                 ProposalSqLiteAdapter* proposalSqlLiteAdapter = [ProposalSqLiteAdapter new ];
+                 [proposalSqlLiteAdapter insert:proposal];
+                 
+             }
+             
+         }
+     };
+
     
     void (^callback)(NSMutableArray*) = ^(NSMutableArray* categories) {
         
@@ -84,7 +111,8 @@
     [userdapater loginuser:callbackUser :@"admin" :@"admin"];
     
     QcmWSAdapter* qcmWSAdapter = [QcmWSAdapter new ];
-    [qcmWSAdapter getQcms:callbackQcm :2];
+    [qcmWSAdapter getQcms:callbackQcms :2];
+    [qcmWSAdapter getQcm:callbackQcm :2];
     
    /* EntityCategory* cate = [EntityCategory new];
     cate.libelle = @"Ma 1ere cate";

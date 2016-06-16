@@ -13,11 +13,10 @@
 
 +(NSString*) ENTITY_PROPOSAL{return @"Proposal";}
 +(NSString*) COL_LIBELLE{return @"libelle";}
-+(NSString*) COL_ISANSWER{return @"isAnswer";}
-+(NSString*) COL_QUESTION{return @"question";}
++(NSString*) COL_QUESTION{return @"id_question";}
 +(NSString*) COL_ID_SERVER{return @"id_server";}
 
--(void)insert:(Proposal*)proposal{
+-(NSManagedObject*)insert:(Proposal*)proposal{
     
     AppDelegate *appDelegate =[[UIApplication sharedApplication]delegate];
     NSManagedObjectContext* context =appDelegate.managedObjectContext;
@@ -27,11 +26,11 @@
     
     //Insert table
     [managedObject setValue:proposal.libelle forKey:ProposalSqLiteAdapter.COL_LIBELLE];
-    [managedObject setValue:[NSNumber numberWithBool:proposal.isAnswer] forKey:ProposalSqLiteAdapter.COL_ISANSWER];
-    [managedObject setValue:proposal.question.id forKey:ProposalSqLiteAdapter.COL_QUESTION];
+    [managedObject setValue:[NSNumber numberWithInt:proposal.question.id_server] forKey:ProposalSqLiteAdapter.COL_QUESTION];
     [managedObject setValue: [NSNumber numberWithInt:proposal.id_server] forKey:ProposalSqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
     
+    return managedObject;
 }
 -(NSArray*) getAll {
     

@@ -10,8 +10,10 @@
 #import "Qcm.h"
 @interface QcmWSAdapter : NSObject
 
--(void) getQcms:(void(^)(NSMutableArray*))callbackQcm:(int)category_id;
+-(void) getQcms:(void(^)(NSMutableArray*))callbackQcms:(int)category_id;
+-(void) getQcm:(void (^)(Qcm *))callbackQcm :(int)qcm_id;
 -(NSMutableArray*) extract:(NSDictionary* )json;
+-(Qcm*) extractQcm:(NSDictionary* )json;
 +(NSString*) JSON_ID;
 +(NSString*) JSON_LIBELLE;
 +(NSString*) JSON_DURATION;
