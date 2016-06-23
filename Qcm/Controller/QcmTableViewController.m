@@ -34,11 +34,14 @@
     };
     
     
-    QcmWSAdapter* qcmWSAdatper = [QcmWSAdapter new];
-    [qcmWSAdatper getQcms:callbackQcm:category.id_server];
+    //QcmWSAdapter* qcmWSAdatper = [QcmWSAdapter new];
+    //[qcmWSAdatper getQcms:callbackQcm:category.id_server];
     
     QcmSqLiteAdapter* qcmSqLiteAdapter = [QcmSqLiteAdapter new];
     qcms =[qcmSqLiteAdapter getAll];
+    for(Qcm* qcm in qcms) {
+        NSLog(@"id server : %@",qcm.id_server);
+    }
     
     
     

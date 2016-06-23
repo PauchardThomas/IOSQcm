@@ -49,7 +49,7 @@
     CategorySqLiteAdapter* categorySqLiteAdapter = [CategorySqLiteAdapter new];
     categories =[categorySqLiteAdapter getAll];
     
-    
+    NSLog(@"toto");
     
     
 }
@@ -138,6 +138,7 @@
         
         EntityCategory* mycat = [EntityCategory new];
         mycat = [categories objectAtIndex:selectedIndex];
+        NSLog(@"id server : %@",mycat.id_server);
         tv.category = mycat;
     }
 }

@@ -50,6 +50,7 @@
 		ECFCF32B1C8DDC9F00086129 /* Proposal.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3251C8DDC9F00086129 /* Proposal.m */; };
 		ECFCF32C1C8DDC9F00086129 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3271C8DDC9F00086129 /* Question.m */; };
 		ECFCF32D1C8DDC9F00086129 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3291C8DDC9F00086129 /* User.m */; };
+		ECFD04F71D15E40300951C34 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFD04F61D15E40300951C34 /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,8 @@
 		ECFCF3271C8DDC9F00086129 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Entity/Question.m; sourceTree = "<group>"; };
 		ECFCF3281C8DDC9F00086129 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Entity/User.h; sourceTree = "<group>"; };
 		ECFCF3291C8DDC9F00086129 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Entity/User.m; sourceTree = "<group>"; };
+		ECFD04F51D15E40300951C34 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = Controller/QuestionViewController.h; sourceTree = "<group>"; };
+		ECFD04F61D15E40300951C34 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = Controller/QuestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +362,8 @@
 				EC28B85C1D089D9B007D0E2C /* QcmTableViewController.m */,
 				EC28B85E1D08A4F2007D0E2C /* PrevisuQcmViewController.h */,
 				EC28B85F1D08A4F2007D0E2C /* PrevisuQcmViewController.m */,
+				ECFD04F51D15E40300951C34 /* QuestionViewController.h */,
+				ECFD04F61D15E40300951C34 /* QuestionViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 				EC28B8601D08A4F2007D0E2C /* PrevisuQcmViewController.m in Sources */,
 				ECEF45BD1C8EC47E0061C1FD /* UIButton+AFNetworking.m in Sources */,
 				ECEF45B91C8EC47E0061C1FD /* AFAutoPurgingImageCache.m in Sources */,
+				ECFD04F71D15E40300951C34 /* QuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

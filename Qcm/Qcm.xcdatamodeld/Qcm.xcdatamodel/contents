@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
     <entity name="AnswerUser" syncable="YES">
-        <relationship name="proposal_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Proposal" inverseName="relationship1" inverseEntity="Proposal" syncable="YES"/>
-        <relationship name="qcm_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Qcm" inverseName="relationship2" inverseEntity="Qcm" syncable="YES"/>
-        <relationship name="question_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="relationship2" inverseEntity="Question" syncable="YES"/>
-        <relationship name="user_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="relationship" inverseEntity="User" syncable="YES"/>
+        <attribute name="proposal_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="qcm_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="question_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Category" syncable="YES">
-        <attribute name="id_server" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id_server" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="qcms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Qcm" inverseName="category" inverseEntity="Qcm" syncable="YES"/>
     </entity>
@@ -16,8 +16,6 @@
         <attribute name="id_server" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="isAnwer" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="proposals" inverseEntity="Question" syncable="YES"/>
-        <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerUser" inverseName="proposal_id" inverseEntity="AnswerUser" syncable="YES"/>
     </entity>
     <entity name="Qcm" syncable="YES">
         <attribute name="category_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -28,30 +26,26 @@
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nbPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="qcms" inverseEntity="Category" syncable="YES"/>
-        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="qcm" inverseEntity="Question" syncable="YES"/>
-        <relationship name="relationship2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerUser" inverseName="qcm_id" inverseEntity="AnswerUser" syncable="YES"/>
+        <relationship name="questions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="qcm" inverseEntity="Question" syncable="YES"/>
     </entity>
     <entity name="Question" syncable="YES">
         <attribute name="id_server" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="points" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="qcm_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="proposals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Proposal" inverseName="question" inverseEntity="Proposal" syncable="YES"/>
         <relationship name="qcm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Qcm" inverseName="questions" inverseEntity="Qcm" syncable="YES"/>
-        <relationship name="relationship2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerUser" inverseName="question_id" inverseEntity="AnswerUser" syncable="YES"/>
     </entity>
     <entity name="User" syncable="YES">
         <attribute name="id_server" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerUser" inverseName="user_id" inverseEntity="AnswerUser" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AnswerUser" positionX="99" positionY="27" width="128" height="103"/>
-        <element name="Category" positionX="-92" positionY="117" width="128" height="88"/>
-        <element name="Proposal" positionX="268" positionY="-81" width="128" height="135"/>
-        <element name="Qcm" positionX="-90" positionY="-81" width="128" height="195"/>
-        <element name="Question" positionX="81" positionY="-126" width="128" height="150"/>
-        <element name="User" positionX="322" positionY="69" width="128" height="103"/>
+        <element name="AnswerUser" positionX="99" positionY="27" width="128" height="105"/>
+        <element name="Category" positionX="-92" positionY="117" width="128" height="90"/>
+        <element name="Proposal" positionX="268" positionY="-81" width="128" height="105"/>
+        <element name="Qcm" positionX="-90" positionY="-81" width="128" height="180"/>
+        <element name="Question" positionX="81" positionY="-126" width="128" height="120"/>
+        <element name="User" positionX="322" positionY="69" width="128" height="90"/>
     </elements>
 </model>

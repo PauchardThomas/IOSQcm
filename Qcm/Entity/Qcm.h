@@ -17,10 +17,10 @@
 @property(strong) NSDate* datePubli;
 @property(strong) NSDate* dateFin;
 @property(strong) NSDate* duration;
-@property int nbPoints;
-@property int id_server;
-@property int category_id;
-@property(strong) NSMutableArray* questions;
+@property(strong) NSNumber* nbPoints;
+@property(strong) NSNumber* id_server;
+@property(strong) NSNumber* category_id;
+@property(strong) NSArray* questions;
 
 
 @end

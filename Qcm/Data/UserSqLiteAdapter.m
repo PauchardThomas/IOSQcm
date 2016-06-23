@@ -26,7 +26,7 @@
     //Insert table
     [managedObject setValue:user.username forKey:UserSqLiteAdapter.COL_USERNAME];
     [managedObject setValue:user.password forKey:UserSqLiteAdapter.COL_PASSWORD];
-    [managedObject setValue: [NSNumber numberWithInt:user.id_server] forKey:UserSqLiteAdapter.COL_ID_SERVER];
+    [managedObject setValue:[NSNumber numberWithInteger:[user.id_server integerValue]] forKey:UserSqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
     
     return managedObject.objectID;
@@ -66,14 +66,14 @@
     return managedObject;
     
 }
--(NSManagedObject*)getByIdServer:(int)id_server {
+-(NSManagedObject*)getByIdServer:(User*)user {
     
     //DB instance
     AppDelegate* appDelegate = [[UIApplication sharedApplication]delegate];
     NSManagedObjectContext* context = appDelegate.managedObjectContext;
     
     // create filter
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id_server = %d",id_server];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id_server = %@",user.id_server];
     
     //create query
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"User"];

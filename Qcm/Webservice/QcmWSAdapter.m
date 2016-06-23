@@ -84,11 +84,11 @@
         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss+SSSS"];
         NSDate* duration=[formatter dateFromString:durationString];
 
-        qcm.id_server = [id intValue];
+        qcm.id_server = id;
         qcm.libelle = libelle;
         qcm.duration = duration;
-        qcm.nbPoints = [points intValue];
-        qcm.category_id = [category intValue];
+        qcm.nbPoints = points;
+        qcm.category_id = category;
         
         [qcms addObject:qcm];
         
@@ -123,13 +123,13 @@
                 NSNumber* proposalIdServer = [proposalObject objectForKey:@"id"];
                 NSString* proposalLibelle = [proposalObject objectForKey:@"libelle"];
                 
-                proposal.id_server = [proposalIdServer intValue];
-                proposalLibelle = proposalLibelle;
+                proposal.id_server = proposalIdServer;
+                proposal.libelle = proposalLibelle;
                 
                 [proposals addObject:proposal];
             }
             
-            question.id_server = [questionIdServer intValue];
+            question.id_server = questionIdServer;
             question.points = questionPoints;
             question.proposals = proposals;
             question.libelle = questionLibelle;
@@ -138,7 +138,7 @@
             
         }
         
-        qcm.id_server = [id intValue];
+        qcm.id_server = id;
         qcm.questions = questions;
         
     }

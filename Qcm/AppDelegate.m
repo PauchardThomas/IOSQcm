@@ -34,7 +34,7 @@
         UserSqLiteAdapter* userAdapter = [UserSqLiteAdapter new ];
         
         //test if user already exist
-        NSManagedObject* isUserExist = [userAdapter getByIdServer:user.id_server];
+        NSManagedObject* isUserExist = [userAdapter getByIdServer:user];
         
        // if(isUserExist.managedObjectContext == nil){
         //    User* usertest = (User*) isUserExist;

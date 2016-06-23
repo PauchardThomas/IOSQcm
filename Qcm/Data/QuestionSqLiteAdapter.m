@@ -28,8 +28,8 @@
     //Insert table
     [managedObject setValue:question.libelle forKey:QuestionSqLiteAdapter.COL_LIBELLE];
     [managedObject setValue:question.points forKey:QuestionSqLiteAdapter.COL_POINTS];
-    [managedObject setValue:[NSNumber numberWithInt:question.qcm.id_server] forKey:QuestionSqLiteAdapter.COL_ID_QCM];
-    [managedObject setValue: [NSNumber numberWithInt:question.id_server] forKey:QuestionSqLiteAdapter.COL_ID_SERVER];
+    [managedObject setValue:[NSNumber numberWithInteger:[question.qcm.id_server integerValue]] forKey:QuestionSqLiteAdapter.COL_ID_QCM];
+    [managedObject setValue:[NSNumber numberWithInteger:[question.id_server integerValue]] forKey:QuestionSqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
     
     return managedObject;
@@ -68,6 +68,27 @@
     
     return managedObject;
     
+}
+-(NSArray*)getByQcm:(Qcm*)qcm {
+    //DB instance
+    AppDelegate *appDelegate =[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext* context =appDelegate.managedObjectContext;
+    
+    
+    //creat filter
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"qcm_id = %@",qcm.id_server];
+    
+    //Create a query
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:QuestionSqLiteAdapter.ENTITY_QUESTION];
+    
+    //set the filter on the query
+    request.predicate = predicate;
+    
+    //execute query
+    NSArray* questions = [context executeFetchRequest:request error:nil];
+   // NSManagedObject* managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
+    
+    return questions;
 }
 -(void)update:(NSManagedObject*)managedObject withQuestion:(Question*)question {
     

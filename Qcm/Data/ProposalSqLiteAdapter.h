@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Proposal.h"
-
+#import "Question.h"
 @interface ProposalSqLiteAdapter : NSObject
 
 +(NSString*) ENTITY_PROPOSAL;
@@ -20,6 +20,7 @@
 -(void)insert:(Proposal*)proposal withQuestion:(NSManagedObject*)question;
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)proposal;
+-(NSMutableArray*)getByQuestion:(Question*)question;
 -(void)update:(NSManagedObject*)managedObject withProposal:(Proposal*)proposal;
 -(void)remove:(NSManagedObject*)managedObject;
 

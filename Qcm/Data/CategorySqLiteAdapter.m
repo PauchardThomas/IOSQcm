@@ -26,7 +26,7 @@
     
     //Insert table
     [managedObject setValue:category.libelle forKey:CategorySqLiteAdapter.COL_LIBELLE];
-    [managedObject setValue: [NSNumber numberWithInt:category.id_server] forKey:CategorySqLiteAdapter.COL_ID_SERVER];
+    [managedObject setValue:[NSNumber numberWithInteger:[category.id_server integerValue]] forKey:CategorySqLiteAdapter.COL_ID_SERVER];
     
     [appDelegate saveContext];
     
@@ -80,7 +80,7 @@
     
     
     //creat filter
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id_server = %i",category.id_server];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id_server = %@",category.id_server];
     
     //Create a query
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:CategorySqLiteAdapter.ENTITY_CATEGORY];
@@ -102,7 +102,7 @@
     
     //update table
     [managedObject setValue:category.libelle forKey:CategorySqLiteAdapter.COL_LIBELLE];
-    [managedObject setValue: [NSNumber numberWithInt:category.id_server] forKey:CategorySqLiteAdapter.COL_ID_SERVER];
+    [managedObject setValue:[NSNumber numberWithInteger:[category.id_server integerValue]] forKey:CategorySqLiteAdapter.COL_ID_SERVER];
     [appDelegate saveContext];
     
 }

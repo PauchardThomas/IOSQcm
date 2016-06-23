@@ -13,5 +13,5 @@
 
 @property(strong) User* user;
 @property(strong) EntityCategory* category;
-@property (strong) NSArray* categories;
+@property(strong) NSArray* categories;
 @end

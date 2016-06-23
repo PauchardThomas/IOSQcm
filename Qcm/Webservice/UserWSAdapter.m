@@ -74,7 +74,7 @@
     NSString* myusername = [u objectForKey:@"username"];
     NSString* mypassword = [u objectForKey:@"password"];
     
-    user.id_server = [myid intValue];
+    user.id_server = myid;
     user.username = myusername;
     user.password = mypassword;
     }

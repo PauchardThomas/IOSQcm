@@ -59,7 +59,7 @@ User* usertosend;
             UserSqLiteAdapter* userAdapter = [UserSqLiteAdapter new ];
             
             //test if user already exist
-            NSManagedObject* isUserExist = [userAdapter getByIdServer:user.id_server];
+            NSManagedObject* isUserExist = [userAdapter getByIdServer:user];
             
             //if not exist : insert
             if(isUserExist.managedObjectContext == nil){

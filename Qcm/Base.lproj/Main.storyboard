@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="1847" y="-1465"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="5bU-dZ-hTX">
             <objects>
-                <viewController id="qTV-EW-jrC" sceneMemberID="viewController">
+                <viewController id="qTV-EW-jrC" customClass="QuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NZc-gh-REm"/>
                         <viewControllerLayoutGuide type="bottom" id="fvd-NL-8BG"/>
@@ -267,6 +267,17 @@
                             <constraint firstItem="4F1-FA-npA" firstAttribute="baseline" secondItem="n6j-ri-ckO" secondAttribute="baseline" id="zSG-Vv-Hir"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbQuestion" destination="Lm6-ef-Tjv" id="A7Y-db-3CM"/>
+                        <outlet property="lbR1" destination="8CL-HC-8v1" id="3GQ-bN-Uyj"/>
+                        <outlet property="lbR2" destination="2bA-9L-Mkr" id="eQh-Tn-vxG"/>
+                        <outlet property="lbR3" destination="xHe-nA-ENx" id="p84-v5-xHs"/>
+                        <outlet property="lbR4" destination="1sP-xv-7o0" id="Hbp-Ld-a9j"/>
+                        <outlet property="swR1" destination="ojC-a7-UQa" id="KCF-3b-lbe"/>
+                        <outlet property="swR2" destination="eTM-3t-3m3" id="Xvq-pF-luP"/>
+                        <outlet property="swR3" destination="yV3-Zr-gQf" id="ACr-WT-8BP"/>
+                        <outlet property="swR4" destination="TfK-1x-XtK" id="DWI-vA-Rj5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fza-kh-wA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

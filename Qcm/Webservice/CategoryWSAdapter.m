@@ -49,7 +49,7 @@
         NSNumber* myid = [cat objectForKey:@"id"];
         NSString* mylibelle = [cat objectForKey:@"libelle"];
         
-        category.id_server = [myid intValue];
+        category.id_server = myid;
         category.libelle = mylibelle;
         
         [categories addObject:category];

@@ -17,7 +17,7 @@
 -(NSManagedObjectID*)insert:(User*)user;
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)user;
--(NSManagedObject*)getByIdServer:(int)id_server;
+-(NSManagedObject*)getByIdServer:(User*)user;
 -(NSManagedObject*)getBy:(NSString*)username:(NSString*)password;
 -(void)update:(NSManagedObject*)managedObject withUser:(User*)user;
 -(void)remove:(NSManagedObject*)managedObject;
