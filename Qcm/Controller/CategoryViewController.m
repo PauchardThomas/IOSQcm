@@ -18,13 +18,16 @@
 @end
 
 @implementation CategoryViewController
-@synthesize category,categories;
+@synthesize category,categories,user;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //NSLog(@"Username : %@",_user.username);
     //NSLog(@"Username : %@",_user.password);
+    
+    User* u = user;
+    NSLog(@"login : %@",u.username);
     
     void (^callback)(NSMutableArray*) = ^(NSMutableArray* categories) {
         
@@ -48,8 +51,6 @@
     
     CategorySqLiteAdapter* categorySqLiteAdapter = [CategorySqLiteAdapter new];
     categories =[categorySqLiteAdapter getAll];
-    
-    NSLog(@"toto");
     
     
 }

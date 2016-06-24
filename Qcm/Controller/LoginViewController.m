@@ -76,10 +76,7 @@ User* usertosend;
             // User already exist
             } else {
                 User* userExist = (User*) isUserExist;
-                
-                //usertosend.id = userExist.id;
-                //usertosend.username = userExist.username;
-                //usertosend.password = userExist.password;
+
             }
             
         };

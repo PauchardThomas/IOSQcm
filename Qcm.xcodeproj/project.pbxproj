@@ -12,6 +12,7 @@
 		EC7425E51CFB4D620034655F /* UserWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7425E41CFB4D620034655F /* UserWSAdapter.m */; };
 		ECED0C821C9037D0001837E3 /* QcmWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */; };
 		ECED0D411C905251001837E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECED0D431C905251001837E3 /* Localizable.strings */; };
+		ECEEA3AB1D1DCB550029122A /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEEA3AA1D1DCB550029122A /* UIView+Toast.m */; };
 		ECEF459E1C8EC4650061C1FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45921C8EC4650061C1FD /* AFHTTPSessionManager.m */; };
 		ECEF459F1C8EC4650061C1FD /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45951C8EC4650061C1FD /* AFNetworkReachabilityManager.m */; };
 		ECEF45A01C8EC4650061C1FD /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45971C8EC4650061C1FD /* AFSecurityPolicy.m */; };
@@ -77,6 +78,8 @@
 		ECED0D421C905251001837E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ECED0D441C90527B001837E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ECED0D471C90572A001837E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		ECEEA3A91D1DCB550029122A /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../../../../Downloads/Toast-master/Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
+		ECEEA3AA1D1DCB550029122A /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "../../../../Downloads/Toast-master/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
 		ECEF45911C8EC4650061C1FD /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		ECEF45921C8EC4650061C1FD /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		ECEF45931C8EC4650061C1FD /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -184,9 +187,19 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		ECEEA3A81D1DCB0F0029122A /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				ECEEA3A91D1DCB550029122A /* UIView+Toast.h */,
+				ECEEA3AA1D1DCB550029122A /* UIView+Toast.m */,
+			);
+			name = Toast;
+			sourceTree = "<group>";
+		};
 		ECEF458B1C8EC3040061C1FD /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				ECEEA3A81D1DCB0F0029122A /* Toast */,
 				ECEF45A41C8EC47E0061C1FD /* UIKit+AFNetworking */,
 				ECEF45901C8EC4650061C1FD /* AFNetworking */,
 			);
@@ -478,6 +491,7 @@
 				ECEF56A01CFE1F20003BF90C /* CategoryViewController.m in Sources */,
 				ECEF45BC1C8EC47E0061C1FD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				ECFCF31E1C8DDC4800086129 /* ProposalSqLiteAdapter.m in Sources */,
+				ECEEA3AB1D1DCB550029122A /* UIView+Toast.m in Sources */,
 				ECEF45BA1C8EC47E0061C1FD /* AFImageDownloader.m in Sources */,
 				ECFCF2D01C8DAE2100086129 /* Qcm.xcdatamodeld in Sources */,
 				ECEF45A31C8EC4650061C1FD /* AFURLSessionManager.m in Sources */,

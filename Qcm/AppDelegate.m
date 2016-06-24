@@ -104,7 +104,7 @@
     };
     
     
-    CategoryWSAdapter* categoryWSAdatper = [CategoryWSAdapter new];
+    /*CategoryWSAdapter* categoryWSAdatper = [CategoryWSAdapter new];
     [categoryWSAdatper getCategories:callback:5];
     
     UserWSAdapter* userdapater = [UserWSAdapter new ];
@@ -112,7 +112,7 @@
     
     QcmWSAdapter* qcmWSAdapter = [QcmWSAdapter new ];
     [qcmWSAdapter getQcms:callbackQcms :2];
-    [qcmWSAdapter getQcm:callbackQcm :2];
+    [qcmWSAdapter getQcm:callbackQcm :2];*/
     
    /* EntityCategory* cate = [EntityCategory new];
     cate.libelle = @"Ma 1ere cate";

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Category.h"
 #import "Qcm.h"
+#import "User.h"
 #import "QcmWSAdapter.h"
 #import "QcmSqLiteAdapter.h"
 @interface QcmTableViewController : UITableViewController

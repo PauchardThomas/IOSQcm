@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Qcm.h"
+#import "User.h"
 #import "QuestionSqLiteAdapter.h"
 #import "ProposalSqLiteAdapter.h"
 @interface QuestionViewController : UIViewController
@@ -21,5 +22,13 @@
 @property (weak, nonatomic) IBOutlet UISwitch *swR3;
 @property (weak, nonatomic) IBOutlet UISwitch *swR4;
 @property (strong) Qcm* qcm;
+@property (strong) User* user;
+- (IBAction)sw1:(id)sender;
+- (IBAction)sw2:(id)sender;
+- (IBAction)sw3:(id)sender;
+- (IBAction)sw4:(id)sender;
+- (IBAction)previous:(id)sender;
+- (IBAction)next:(id)sender;
+
 
 @end
