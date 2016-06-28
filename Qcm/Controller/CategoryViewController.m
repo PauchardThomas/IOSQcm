@@ -23,14 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //NSLog(@"Username : %@",_user.username);
-    //NSLog(@"Username : %@",_user.password);
+    NSLog(@"Username : %@",user.username);
+    NSLog(@"Username : %@",user.password);
     
     User* u = user;
     NSLog(@"login : %@",u.username);
     
     void (^callback)(NSMutableArray*) = ^(NSMutableArray* categories) {
-        
+        //
         if(categories != nil){
             for (EntityCategory* cat in categories) {
                 
@@ -141,6 +141,7 @@
         mycat = [categories objectAtIndex:selectedIndex];
         NSLog(@"id server : %@",mycat.id_server);
         tv.category = mycat;
+        tv.user = user;
     }
 }
 

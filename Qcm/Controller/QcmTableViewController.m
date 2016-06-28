@@ -13,7 +13,7 @@
 @end
 
 @implementation QcmTableViewController
-@synthesize qcms,category;
+@synthesize qcms,category,user;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -124,6 +124,7 @@
         Qcm* myqcm = [Qcm new];
         myqcm = [qcms objectAtIndex:selectedIndex];
         pq.qcm = myqcm;
+        pq.user = user;
   //  }
 }
 

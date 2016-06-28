@@ -13,7 +13,7 @@
 @end
 
 @implementation PrevisuQcmViewController
-@synthesize qcm,lbQcm,lbDuree;
+@synthesize qcm,lbQcm,lbDuree,user;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -43,6 +43,7 @@
 
     QuestionViewController* qc = [segue destinationViewController];
     qc.qcm = qcm;
+    qc.user = user;
     
     
 }

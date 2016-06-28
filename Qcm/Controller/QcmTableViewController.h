@@ -15,5 +15,6 @@
 @interface QcmTableViewController : UITableViewController
 @property(strong) EntityCategory* category;
 @property(strong) Qcm* qcm;
+@property(strong)User* user;
 @property (strong) NSArray* qcms;
 @end

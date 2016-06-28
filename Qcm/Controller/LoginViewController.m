@@ -85,9 +85,14 @@ User* usertosend;
         usertosend =[userdapater loginuser:callbackUser:loginLabel.text:PasswordLabel.text];
         
 
+        NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString* documentDirectory = [paths objectAtIndex:0];
+        NSLog(@"path is %@",documentDirectory);
+        UserSqLiteAdapter* usersqlAdapter = [UserSqLiteAdapter new];
+        usertosend =(User*) [usersqlAdapter getBy:loginLabel.text :PasswordLabel.text];
         
         CategoryViewController* cc = [segue destinationViewController];
-        //cc.user = usertosend;
+        cc.user = usertosend;
         
     }
 }

@@ -32,6 +32,8 @@
 		ECEF45C81C8ECAAF0061C1FD /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45C71C8ECAAF0061C1FD /* Weather.m */; };
 		ECEF45CB1C8F125B0061C1FD /* CategoryWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF45CA1C8F125B0061C1FD /* CategoryWSAdapter.m */; };
 		ECEF56A01CFE1F20003BF90C /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEF569F1CFE1F20003BF90C /* CategoryViewController.m */; };
+		ECF40E641D21B3BC00078B50 /* ProposalUser.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF40E631D21B3BC00078B50 /* ProposalUser.m */; };
+		ECF40E671D21B48B00078B50 /* ProposalUserSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF40E661D21B48B00078B50 /* ProposalUserSqLiteAdapter.m */; };
 		ECFCF2C41C8DAE2100086129 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2C31C8DAE2100086129 /* main.m */; };
 		ECFCF2C71C8DAE2100086129 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2C61C8DAE2100086129 /* AppDelegate.m */; };
 		ECFCF2CA1C8DAE2100086129 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2C91C8DAE2100086129 /* ViewController.m */; };
@@ -121,6 +123,10 @@
 		ECEF45CA1C8F125B0061C1FD /* CategoryWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryWSAdapter.m; path = Webservice/CategoryWSAdapter.m; sourceTree = "<group>"; };
 		ECEF569E1CFE1F20003BF90C /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryViewController.h; path = Controller/CategoryViewController.h; sourceTree = "<group>"; };
 		ECEF569F1CFE1F20003BF90C /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewController.m; path = Controller/CategoryViewController.m; sourceTree = "<group>"; };
+		ECF40E621D21B3BC00078B50 /* ProposalUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProposalUser.h; path = Entity/ProposalUser.h; sourceTree = "<group>"; };
+		ECF40E631D21B3BC00078B50 /* ProposalUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProposalUser.m; path = Entity/ProposalUser.m; sourceTree = "<group>"; };
+		ECF40E651D21B48B00078B50 /* ProposalUserSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProposalUserSqLiteAdapter.h; path = Data/ProposalUserSqLiteAdapter.h; sourceTree = "<group>"; };
+		ECF40E661D21B48B00078B50 /* ProposalUserSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProposalUserSqLiteAdapter.m; path = Data/ProposalUserSqLiteAdapter.m; sourceTree = "<group>"; };
 		ECFCF2BF1C8DAE2100086129 /* Qcm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qcm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFCF2C31C8DAE2100086129 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECFCF2C51C8DAE2100086129 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -341,6 +347,8 @@
 				ECFCF31A1C8DDC4800086129 /* QuestionSqLiteAdapter.m */,
 				ECFCF3171C8DDC4800086129 /* QcmSqLiteAdapter.h */,
 				ECFCF3181C8DDC4800086129 /* QcmSqLiteAdapter.m */,
+				ECF40E651D21B48B00078B50 /* ProposalUserSqLiteAdapter.h */,
+				ECF40E661D21B48B00078B50 /* ProposalUserSqLiteAdapter.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -360,6 +368,8 @@
 				ECFCF2FC1C8DB00100086129 /* Qcm.m */,
 				ECEF45C61C8ECAAF0061C1FD /* Weather.h */,
 				ECEF45C71C8ECAAF0061C1FD /* Weather.m */,
+				ECF40E621D21B3BC00078B50 /* ProposalUser.h */,
+				ECF40E631D21B3BC00078B50 /* ProposalUser.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -497,6 +507,7 @@
 				ECEF45A31C8EC4650061C1FD /* AFURLSessionManager.m in Sources */,
 				ECFCF32A1C8DDC9F00086129 /* Category.m in Sources */,
 				ECFCF31D1C8DDC4800086129 /* CategorySqLiteAdapter.m in Sources */,
+				ECF40E671D21B48B00078B50 /* ProposalUserSqLiteAdapter.m in Sources */,
 				ECFCF31F1C8DDC4800086129 /* QcmSqLiteAdapter.m in Sources */,
 				ECFCF3101C8DCED000086129 /* LoginViewController.m in Sources */,
 				ECEF459E1C8EC4650061C1FD /* AFHTTPSessionManager.m in Sources */,
@@ -516,6 +527,7 @@
 				ECFCF2C41C8DAE2100086129 /* main.m in Sources */,
 				ECFCF32D1C8DDC9F00086129 /* User.m in Sources */,
 				ECFCF32C1C8DDC9F00086129 /* Question.m in Sources */,
+				ECF40E641D21B3BC00078B50 /* ProposalUser.m in Sources */,
 				ECEF45BB1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				ECFCF32B1C8DDC9F00086129 /* Proposal.m in Sources */,
 				ECFCF3201C8DDC4800086129 /* QuestionSqLiteAdapter.m in Sources */,
