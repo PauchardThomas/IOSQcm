@@ -116,7 +116,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="T8i-yJ-8WB">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T8i-yJ-8WB" id="jm2-HM-8WW">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -147,7 +147,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QcmCell" id="ABD-z4-gTm">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ABD-z4-gTm" id="jc9-Js-Fsk">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -295,6 +295,7 @@
                         <outlet property="swR2" destination="eTM-3t-3m3" id="Xvq-pF-luP"/>
                         <outlet property="swR3" destination="yV3-Zr-gQf" id="Mui-rZ-27c"/>
                         <outlet property="swR4" destination="TfK-1x-XtK" id="DWI-vA-Rj5"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="mysegue" id="28L-C2-U4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fza-kh-wA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,4 +364,7 @@
         <image name="Hello" width="475" height="360"/>
         <image name="test" width="475" height="360"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="28L-C2-U4f"/>
+    </inferredMetricsTieBreakers>
 </document>

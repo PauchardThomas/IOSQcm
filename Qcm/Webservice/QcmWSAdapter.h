@@ -11,7 +11,7 @@
 @interface QcmWSAdapter : NSObject
 
 -(void) getQcms:(void(^)(NSMutableArray*))callbackQcms:(int)category_id;
--(void) getQcm:(void (^)(Qcm *))callbackQcm :(int)qcm_id;
+-(void) getQcm:(void (^)(Qcm *))callbackQcm :(NSNumber*)qcm_id;
 -(NSMutableArray*) extract:(NSDictionary* )json;
 -(Qcm*) extractQcm:(NSDictionary* )json;
 +(NSString*) JSON_ID;

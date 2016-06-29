@@ -41,13 +41,13 @@
     
 }
 
-- (void)getQcm:(void (^)(Qcm *))callbackQcm :(int)qcm_id {
+- (void)getQcm:(void (^)(Qcm *))callbackQcm :(NSNumber*)qcm_id {
     
     // Create session
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     
     //Create request
-    NSString* URL = [NSString stringWithFormat:@"http://192.168.1.39/qcm2/web/app_dev.php/api/qcms/%d",qcm_id];
+    NSString* URL = [NSString stringWithFormat:@"http://192.168.1.39/qcm2/web/app_dev.php/api/qcms/%@",qcm_id];
     [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSLog(@"JSON : %@",responseObject);

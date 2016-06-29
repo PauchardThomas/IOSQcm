@@ -11,6 +11,7 @@
 #import "WeatherWSAdapter.h"
 #import "CategoryViewController.h"
 #import "UserSqLiteAdapter.h"
+#import "UIView+Toast.h"
 @interface LoginViewController ()
 
 @end
@@ -45,52 +46,64 @@ User* usertosend;
 
 #pragma mark - Navigation
 
+-(BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    usertosend = [User new];
+    void (^callbackUser)(User*) = ^(User* user) {
+        
+        
+        UserSqLiteAdapter* userAdapter = [UserSqLiteAdapter new ];
+        
+        //test if user already exist
+        NSManagedObject* isUserExist = [userAdapter getByIdServer:user];
+        
+        //if not exist : insert
+        if(isUserExist == nil){
+            
+            
+            NSManagedObjectID* idInserted = [userAdapter insert:user];
+            NSLog(@"%@",idInserted);
+            user.id = idInserted;
+            
+            usertosend.id = user.id;
+            usertosend.username = user.username;
+            usertosend.password = user.password;
+            
+            // User already exist
+        } else {
+            User* userExist = (User*) isUserExist;
+            
+        }
+        
+    };
+    
+    UserWSAdapter* userdapater = [UserWSAdapter new ];
+    usertosend =[userdapater loginuser:callbackUser:loginLabel.text:PasswordLabel.text];
+    
+    
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString* documentDirectory = [paths objectAtIndex:0];
+    NSLog(@"path is %@",documentDirectory);
+    
+    UserSqLiteAdapter* usersqlAdapter = [UserSqLiteAdapter new];
+    usertosend =(User*) [usersqlAdapter getBy:loginLabel.text :PasswordLabel.text];
+    if(usertosend == nil) {
+        [self.view makeToast:@"Identifiants incorrects"];
+        return NO;
+    }else {
+        return YES;
+    }
+    return NO;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    usertosend = [User new];
-    
     if([[segue identifier] isEqualToString:(@"FromLoginToCategories")]){
-        
-        void (^callbackUser)(User*) = ^(User* user) {
-            
-            
-            UserSqLiteAdapter* userAdapter = [UserSqLiteAdapter new ];
-            
-            //test if user already exist
-            NSManagedObject* isUserExist = [userAdapter getByIdServer:user];
-            
-            //if not exist : insert
-            if(isUserExist.managedObjectContext == nil){
-                
-                
-                NSManagedObjectID* idInserted = [userAdapter insert:user];
-                NSLog(@"%@",idInserted);
-                user.id = idInserted;
-                
-                usertosend.id = user.id;
-                usertosend.username = user.username;
-                usertosend.password = user.password;
-                
-            // User already exist
-            } else {
-                User* userExist = (User*) isUserExist;
 
-            }
-            
-        };
-        
-        UserWSAdapter* userdapater = [UserWSAdapter new ];
-        usertosend =[userdapater loginuser:callbackUser:loginLabel.text:PasswordLabel.text];
-        
-
-        NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-        NSString* documentDirectory = [paths objectAtIndex:0];
-        NSLog(@"path is %@",documentDirectory);
+        usertosend = [User new];
         UserSqLiteAdapter* usersqlAdapter = [UserSqLiteAdapter new];
         usertosend =(User*) [usersqlAdapter getBy:loginLabel.text :PasswordLabel.text];
-        
         CategoryViewController* cc = [segue destinationViewController];
         cc.user = usertosend;
         

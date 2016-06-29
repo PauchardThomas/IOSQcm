@@ -11,6 +11,7 @@
 #import "UIView+Toast.h"
 #import "ProposalUserSqLiteAdapter.h"
 #import "ProposalUser.h"
+#import "CategoryViewController.h"
 @interface QuestionViewController ()
 
 @end
@@ -120,7 +121,7 @@ int counter;
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -128,7 +129,7 @@ int counter;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 
 - (IBAction)sw1:(id)sender {
@@ -229,6 +230,13 @@ int counter;
         proposalUser.proposal_id = [NSNumber numberWithInt:(int)swR4.tag];
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         [proposalUserSqLiteAdapter remove:proposalUser];
+        NSManagedObject* isdelete =[proposalUserSqLiteAdapter getBy:proposalUser.user_id :proposalUser.proposal_id];
+        if(isdelete == nil){
+            NSLog(@"delete");
+        }else{
+            NSLog(@"non delete");
+        }
+            
     }
 }
 
@@ -343,10 +351,11 @@ int counter;
     }else {
         [self.view makeToast:@"On est a la derniere question"];
         [self setTitle:@"Terminer"];
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Title" message:@"Message"preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Envoyer les réponses ?" message:@"Message"preferredStyle:UIAlertControllerStyleAlert];
         
-        UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
-            NSLog(@"ok");
+        UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Envoyer" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+            NSLog(@"Envoyer");
+            
         }];
         [alertController addAction:actionOk];
         UIAlertAction *actionBack = [UIAlertAction actionWithTitle:@"Retour" style:UIAlertActionStyleDefault handler:nil];

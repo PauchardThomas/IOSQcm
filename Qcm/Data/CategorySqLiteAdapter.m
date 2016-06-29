@@ -89,7 +89,15 @@
     request.predicate = predicate;
     
     //execute query
-    NSManagedObject* managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
+    NSManagedObject* managedObject = nil;
+    
+    @try {
+        managedObject =[[context executeFetchRequest:request error:nil]objectAtIndex:0];
+        return managedObject;
+    }@catch(NSException* e) {
+        NSLog(@"%@",e);
+    }
+   
     
     return managedObject;
     

@@ -88,15 +88,16 @@
     
     //set the filter on the query
     request.predicate = predicate;
+    NSManagedObject* managedObject = nil;
     @try {
-         NSManagedObject* managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
+         managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
+        return managedObject;
     }
     @catch (NSException *exception) {
         NSLog(@"%@",exception.reason);
+        return nil;
     }
 
-    //execute query
-    NSManagedObject* managedObject = [[context executeFetchRequest:request error:nil]objectAtIndex:0];
     
     return managedObject;
     

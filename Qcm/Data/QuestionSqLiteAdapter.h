@@ -18,6 +18,7 @@
 -(NSManagedObject*)insert:(Question*)question;
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)question;
+-(NSManagedObject*)getByIdServer:(Question*)question;
 -(NSArray*)getByQcm:(Qcm*)qcm;
 -(void)update:(NSManagedObject*)managedObject withQuestion:(Question*)question;
 -(void)remove:(NSManagedObject*)managedObject;

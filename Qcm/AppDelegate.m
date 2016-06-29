@@ -36,15 +36,15 @@
         //test if user already exist
         NSManagedObject* isUserExist = [userAdapter getByIdServer:user];
         
-       // if(isUserExist.managedObjectContext == nil){
-        //    User* usertest = (User*) isUserExist;
-          //  NSLog(@"%@",usertest.username);
-        //}else {
-          //  NSLog(@"User existe déjà");
+        if(isUserExist == nil){
+            User* usertest = (User*) isUserExist;
+            NSLog(@"%@",usertest.username);
+        }else {
+            NSLog(@"User existe déjà");
             NSManagedObjectID* idInserted = [userAdapter insert:user];
             NSLog(@"%@",idInserted);
             user.id = idInserted;
-       // }
+        }
     };
     
     void (^callbackQcms)(NSMutableArray*) = ^(NSMutableArray* qcms) {
@@ -53,13 +53,13 @@
             for (Qcm* qcm in qcms) {
                 
                 QcmSqLiteAdapter* adapter = [QcmSqLiteAdapter new];
-               // CategorySqLiteAdapter* catadapter = [CategorySqLiteAdapter new ];
-               // NSManagedObject* isQcmExist =[adapter getByIdServer:qcm];
-                //if(isQcmExist.managedObjectContext == nil){
+                //CategorySqLiteAdapter* catadapter = [CategorySqLiteAdapter new ];
+                NSManagedObject* isQcmExist =[adapter getByIdServer:qcm];
+                if(isQcmExist == nil){
                     [adapter insert:qcm];
-                //} else{
-                //    [adapter update:isQcmExist withQcm:qcm];
-               // }
+                } else{
+                    [adapter update:isQcmExist withQcm:qcm];
+                }
             }
         }
     };
@@ -93,26 +93,26 @@
             for (EntityCategory* cat in categories) {
                 
                 CategorySqLiteAdapter* adapter = [CategorySqLiteAdapter new];
-               // NSManagedObject* isCatExist =[adapter getByIdServer:cat];
-               // if(isCatExist.managedObjectContext == nil){
+                NSManagedObject* isCatExist =[adapter getByIdServer:cat];
+                if(isCatExist == nil){
                     [adapter insert:cat];
-               // } else{
-                //    [adapter update:isCatExist withCategory:cat];
-                //}
+                } else{
+                    [adapter update:isCatExist withCategory:cat];
+                }
             }
         }
     };
     
     
-    /*CategoryWSAdapter* categoryWSAdatper = [CategoryWSAdapter new];
+    CategoryWSAdapter* categoryWSAdatper = [CategoryWSAdapter new];
     [categoryWSAdatper getCategories:callback:5];
     
-    UserWSAdapter* userdapater = [UserWSAdapter new ];
-    [userdapater loginuser:callbackUser :@"admin" :@"admin"];
+    //UserWSAdapter* userdapater = [UserWSAdapter new ];
+    //[userdapater loginuser:callbackUser :@"admin" :@"admin"];
     
     QcmWSAdapter* qcmWSAdapter = [QcmWSAdapter new ];
     [qcmWSAdapter getQcms:callbackQcms :2];
-    [qcmWSAdapter getQcm:callbackQcm :2];*/
+    //[qcmWSAdapter getQcm:callbackQcm :2];
     
    /* EntityCategory* cate = [EntityCategory new];
     cate.libelle = @"Ma 1ere cate";

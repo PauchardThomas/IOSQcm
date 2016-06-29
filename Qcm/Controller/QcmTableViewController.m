@@ -8,6 +8,9 @@
 
 #import "QcmTableViewController.h"
 #import "PrevisuQcmViewController.h"
+#import "QcmSqLiteAdapter.h"
+#import "QuestionSqLiteAdapter.h"
+#import "ProposalSqLiteAdapter.h"
 @interface QcmTableViewController ()
 
 @end
@@ -117,15 +120,43 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-   // if([[segue identifier] isEqualToString:(@"FromQcmToQPrevisu")]){
+    
+    void (^callbackQcm)(Qcm*) = ^(Qcm* qcm) {
+        
+        //Set id to Qcm
+        QcmSqLiteAdapter *qcmSqlLiteAdapter = [QcmSqLiteAdapter new];
+        qcm.id = [[qcmSqlLiteAdapter getByIdServer:qcm] objectID];
+        
+        for(Question* question in [qcm questions]) {
+            
+            QuestionSqLiteAdapter* questionSqlLiteAdapter = [QuestionSqLiteAdapter new ];
+            question.qcm = qcm;
+            NSManagedObject* isQuestionExist =[questionSqlLiteAdapter getByIdServer:question];
+            if(isQuestionExist == nil){
+            question.id = [[questionSqlLiteAdapter insert:question] objectID];
+            
+                for(Proposal* proposal in question.proposals) {
+                    proposal.question = question;
+                    ProposalSqLiteAdapter* proposalSqlLiteAdapter = [ProposalSqLiteAdapter new ];
+                    [proposalSqlLiteAdapter insert:proposal];
+                
+                }
+            }
+        }
+    };
+    
+
         NSInteger selectedIndex = [[self.tableView indexPathForSelectedRow]row];
         PrevisuQcmViewController* pq = [segue destinationViewController];
         
         Qcm* myqcm = [Qcm new];
         myqcm = [qcms objectAtIndex:selectedIndex];
+        NSLog(@"myqcm id server : %@",myqcm.id_server);
+        QcmWSAdapter* qcmWSAdapter = [QcmWSAdapter new ];
+        [qcmWSAdapter getQcm:callbackQcm :myqcm.id_server ];
         pq.qcm = myqcm;
         pq.user = user;
-  //  }
+    
 }
 
 

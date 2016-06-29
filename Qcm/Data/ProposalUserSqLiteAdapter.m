@@ -43,8 +43,11 @@
     [managedObject setValue:proposalUser.qcm_id forKey:ProposalUserSqLiteAdapter.COL_QCM_ID];
     [managedObject setValue:proposalUser.question_id forKey:ProposalUserSqLiteAdapter.COL_QUESTION_ID];
     [managedObject setValue:proposalUser.proposal_id forKey:ProposalUserSqLiteAdapter.COL_PROPOSAL_ID];
-    
+
     [context deleteObject:managedObject];
+    [appDelegate saveContext];
+   
+    
     
 }
 -(NSManagedObject*)getBy:(NSNumber*)userId:(NSNumber*)questionId{

@@ -90,6 +90,37 @@
     
     return questions;
 }
+
+-(NSManagedObject*)getByIdServer:(Question*)question {
+    
+    //DB instance
+    AppDelegate *appDelegate =[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext* context =appDelegate.managedObjectContext;
+    
+    
+    //creat filter
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id_server = %@",question.id_server];
+    
+    //Create a query
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:QuestionSqLiteAdapter.ENTITY_QUESTION];
+    
+    //set the filter on the query
+    request.predicate = predicate;
+    
+    //execute query
+    NSManagedObject* managedObject = nil;
+    
+    @try {
+        managedObject =[[context executeFetchRequest:request error:nil]objectAtIndex:0];
+        return managedObject;
+    }@catch(NSException* e) {
+        NSLog(@"%@",e);
+    }
+    
+    
+    return managedObject;
+    
+}
 -(void)update:(NSManagedObject*)managedObject withQuestion:(Question*)question {
     
     //DB instance
