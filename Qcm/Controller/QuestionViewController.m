@@ -17,13 +17,19 @@
 @end
 
 @implementation QuestionViewController
-@synthesize lbQuestion,lbR1,lbR2,lbR3,lbR4,swR1,swR2,swR3,swR4,qcm,user;
+@synthesize lbQuestion,lbR1,lbR2,lbR3,lbR4,swR1,swR2,swR3,swR4,qcm,user,category;
 NSMutableDictionary* lesQuestions;
 NSNumber* i;
 int counter;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"%@",qcm.libelle);
+    NSLog(@"%@",category.libelle);
+
+    [_lbQcm setText:qcm.libelle];
+    [ _lbUser setText:user.username];
+    [ _lbCategory setText:category.libelle];
+
     Qcm* q = (Qcm*)qcm;
 
     lesQuestions = [NSMutableDictionary new];
@@ -62,7 +68,9 @@ int counter;
     
     Question* maQuestion = [lesQuestions objectForKey:i];
     
-    lbQuestion.text = maQuestion.libelle;
+    NSString *questionDisplay = [NSString stringWithFormat:@"Question %d : %@",counter,maQuestion.libelle];
+    //lbQuestion.text = question.libelle;
+    lbQuestion.text = questionDisplay;
     int j =1;
     ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
     for(Proposal* proposal in maQuestion.proposals) {
@@ -221,7 +229,9 @@ int counter;
         counter--;
         i = [NSNumber numberWithInt:counter];
         Question* question = [lesQuestions objectForKey:i];
-        lbQuestion.text = question.libelle;
+        NSString *questionDisplay = [NSString stringWithFormat:@"Question %d : %@",counter,question.libelle];
+        //lbQuestion.text = question.libelle;
+        lbQuestion.text = questionDisplay;
         int j =1;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         for(Proposal* proposal in question.proposals) {
@@ -278,7 +288,9 @@ int counter;
         counter++;
         i = [NSNumber numberWithInt:counter];
         Question* question = [lesQuestions objectForKey:i];
-        lbQuestion.text = question.libelle;
+        NSString *questionDisplay = [NSString stringWithFormat:@"Question %d : %@",counter,question.libelle];
+        //lbQuestion.text = question.libelle;
+        lbQuestion.text = questionDisplay;
         int j =1;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         for(Proposal* proposal in question.proposals) {

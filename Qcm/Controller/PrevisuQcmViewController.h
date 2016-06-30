@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Qcm.h"
 #import "User.h"
+#import "Category.h"
 @interface PrevisuQcmViewController : UIViewController
 @property(strong) Qcm* qcm;
 @property(strong) User* user;
+@property(strong) EntityCategory* category;
 @property (weak, nonatomic) IBOutlet UILabel *lbQcm;
 @property (weak, nonatomic) IBOutlet UILabel *lbDuree;
 

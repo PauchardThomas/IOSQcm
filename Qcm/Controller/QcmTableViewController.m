@@ -156,6 +156,7 @@
         [qcmWSAdapter getQcm:callbackQcm :myqcm.id_server ];
         pq.qcm = myqcm;
         pq.user = user;
+        pq.category = self.category;
     
 }
 
