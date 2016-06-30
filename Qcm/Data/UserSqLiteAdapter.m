@@ -76,7 +76,7 @@
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id_server = %@",user.id_server];
     
     //create query
-    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:UserSqLiteAdapter.ENTITY_USER];
     
     //set filter to query
     request.predicate = predicate;
@@ -104,7 +104,7 @@
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"username = %@ AND password = %@ ",username,password];
     
     //create query
-    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:UserSqLiteAdapter.ENTITY_USER];
     
     //set filter to query
     request.predicate = predicate;

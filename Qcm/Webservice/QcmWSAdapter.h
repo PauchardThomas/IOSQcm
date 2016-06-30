@@ -19,5 +19,7 @@
 +(NSString*) JSON_DURATION;
 +(NSString*) JSON_NB_POINTS;
 +(NSString*) JSON_CATEGORY;
++(NSString*) BASE_URL;
++(NSString*) BASE_URL2;
 
 @end

@@ -56,7 +56,7 @@ int counter;
     myqcm.category_id = q.category_id;
     myqcm.nbPoints = q.nbPoints;
     myqcm.questions = test;
-    NSLog(@"Voila..");
+
     counter = 1;
     i = [NSNumber numberWithInt:counter];
     
@@ -69,7 +69,6 @@ int counter;
         switch (j) {
             case 1:
                 swR1.tag = [proposal.id_server integerValue];
-                NSLog(@"proposal switch 1 id server : %ld",swR1.tag);
                 lbR1.text = proposal.libelle;
                 if([proposalUserSqLiteAdapter getBy:user.id_server :[NSNumber numberWithInt:(int)swR1.tag]] != nil) {
                     [swR1 setOn:true];
@@ -79,7 +78,6 @@ int counter;
                 break;
             case 2:
                 swR2.tag = [proposal.id_server integerValue];
-                NSLog(@"proposal switch 2 id server : %ld",swR2.tag);
                 lbR2.text = proposal.libelle;
                 if([proposalUserSqLiteAdapter getBy:user.id_server :[NSNumber numberWithInt:(int)swR2.tag]] != nil) {
                     [swR2 setOn:true];
@@ -89,7 +87,6 @@ int counter;
                 break;
             case 3 :
                 swR3.tag = [proposal.id_server integerValue];
-                NSLog(@"proposal switch 3 id server : %ld",swR3.tag);
                 lbR3.text = proposal.libelle;
                 if([proposalUserSqLiteAdapter getBy:user.id_server :[NSNumber numberWithInt:(int)swR3.tag]] != nil) {
                     [swR3 setOn:true];
@@ -99,7 +96,6 @@ int counter;
                 break;
             case 4 :
                 swR4.tag = [proposal.id_server integerValue];
-                NSLog(@"proposal switch 4 id server : %ld",swR4.tag);
                 lbR4.text = proposal.libelle;
                 if([proposalUserSqLiteAdapter getBy:user.id_server :[NSNumber numberWithInt:(int)swR4.tag]] != nil) {
                     [swR4 setOn:true];
@@ -126,18 +122,14 @@ int counter;
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    CategoryViewController* cv = [segue destinationViewController];
+    cv.fromQuestions = YES;
 }
 
 
 
 - (IBAction)sw1:(id)sender {
     if ([sender isOn]) {
-        [self.view makeToast:@"Selected, id server :"];
-        NSLog(@"-------");
-        NSLog(@"id serveur : %ld",swR1.tag);
-        NSLog(@"-------");
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -148,7 +140,6 @@ int counter;
         
         
     } else {
-        [self.view makeToast:@"No selected"];
         
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
@@ -162,10 +153,6 @@ int counter;
 
 - (IBAction)sw2:(id)sender {
     if ([sender isOn]) {
-        [self.view makeToast:@"Selected, id server :"];
-        NSLog(@"-------");
-        NSLog(@"id serveur : %ld",swR2.tag);
-        NSLog(@"-------");
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -174,7 +161,6 @@ int counter;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         [proposalUserSqLiteAdapter insert:proposalUser];
     } else {
-        [self.view makeToast:@"No selected"];
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -186,10 +172,6 @@ int counter;
 }
 - (IBAction)sw3:(id)sender {
     if ([sender isOn]) {
-        [self.view makeToast:@"Selected, id server :"];
-        NSLog(@"-------");
-        NSLog(@"id serveur : %ld",swR3.tag);
-        NSLog(@"-------");
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -198,7 +180,6 @@ int counter;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         [proposalUserSqLiteAdapter insert:proposalUser];
     } else {
-        [self.view makeToast:@"No selected"];
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -210,10 +191,6 @@ int counter;
 }
 - (IBAction)sw4:(id)sender {
     if ([sender isOn]) {
-        [self.view makeToast:@"Selected, id server :"];
-        NSLog(@"-------");
-        NSLog(@"id serveur : %ld",swR4.tag);
-        NSLog(@"-------");
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -222,7 +199,6 @@ int counter;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         [proposalUserSqLiteAdapter insert:proposalUser];
     } else {
-        [self.view makeToast:@"No selected"];
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -355,6 +331,8 @@ int counter;
         
         UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Envoyer" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
             NSLog(@"Envoyer");
+            CategoryViewController* cat = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryView"];
+            [self performSegueWithIdentifier:@"questionToCat" sender:@"questionToCat"];
             
         }];
         [alertController addAction:actionOk];

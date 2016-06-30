@@ -17,20 +17,20 @@
 +(NSString*) JSON_DURATION { return @"duration";}
 +(NSString*) JSON_NB_POINTS { return @"nbPoints";}
 +(NSString*) JSON_CATEGORY{ return @"category";}
-
++(NSString*) BASE_URL {return @"http://192.168.1.39/qcm2/web/app_dev.php/api/lists";}
++(NSString*) BASE_URL2 {return @"http://192.168.1.39/qcm2/web/app_dev.php/api/qcms";}
 -(void) getQcms:(void (^)(NSMutableArray *))callbackQcms :(int)category_id {
     
     // Create session
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     
     //Create request
-    NSString* URL = [NSString stringWithFormat:@"http://192.168.1.39/qcm2/web/app_dev.php/api/lists/%d/qcm",category_id];
+    NSString* URL = [NSString stringWithFormat:@"%@/%d/qcm",QcmWSAdapter.BASE_URL,category_id];
     [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"JSON : %@",responseObject);
+        // extract reponse to qcms
         NSMutableArray* qcms = [self extract:responseObject];
         
-        // callback(nil);
         callbackQcms(qcms);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Error : %@",error);
@@ -47,13 +47,12 @@
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     
     //Create request
-    NSString* URL = [NSString stringWithFormat:@"http://192.168.1.39/qcm2/web/app_dev.php/api/qcms/%@",qcm_id];
+    NSString* URL = [NSString stringWithFormat:@"%@/%@",QcmWSAdapter.BASE_URL2,qcm_id];
     [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"JSON : %@",responseObject);
+        // Extract response to qcm
         Qcm* qcm = [self extractQcm:responseObject];
         
-        // callback(nil);
         callbackQcm(qcm);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Error : %@",error);
@@ -74,11 +73,11 @@
         
         qcm = [Qcm new];
         
-        NSNumber* id = [q objectForKey:@"id"];
-        NSString* libelle = [q objectForKey:@"libelle"];
-        NSString* durationString = [q objectForKey:@"duration"];
-        NSNumber* points = [q objectForKey:@"nbPoints"];
-        NSNumber* category = [q objectForKey:@"category"];
+        NSNumber* id = [q objectForKey:QcmWSAdapter.JSON_ID];
+        NSString* libelle = [q objectForKey:QcmWSAdapter.JSON_LIBELLE];
+        NSString* durationString = [q objectForKey:QcmWSAdapter.JSON_DURATION];
+        NSNumber* points = [q objectForKey:QcmWSAdapter.JSON_NB_POINTS];
+        NSNumber* category = [q objectForKey:QcmWSAdapter.JSON_CATEGORY];
         
         NSDateFormatter* formatter = [NSDateFormatter new];
         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss+SSSS"];
@@ -101,7 +100,7 @@
 -(Qcm*) extractQcm:(NSDictionary* )json {
     Qcm* qcm = [Qcm new];
     for(NSDictionary*q in json){
-        NSNumber* id = [json objectForKey:@"id"];
+        NSNumber* id = [json objectForKey:QcmWSAdapter.JSON_ID];
         NSMutableArray* questions = [NSMutableArray new];
         NSDictionary* questionArray = [json objectForKey:@"question_id"];
         
@@ -109,8 +108,8 @@
             
             Question* question = [Question new ];
             
-            NSNumber* questionIdServer = [questionObject objectForKey:@"id"];
-            NSString* questionLibelle = [questionObject objectForKey:@"libelle"];
+            NSNumber* questionIdServer = [questionObject objectForKey:QcmWSAdapter.JSON_ID];
+            NSString* questionLibelle = [questionObject objectForKey:QcmWSAdapter.JSON_LIBELLE];
             NSNumber* questionPoints = [questionObject objectForKey:@"points"];
             
             NSMutableArray* proposals = [NSMutableArray new];
@@ -120,8 +119,8 @@
             for(NSDictionary* proposalObject in proposalArray) {
                 Proposal* proposal = [Proposal new];
                 
-                NSNumber* proposalIdServer = [proposalObject objectForKey:@"id"];
-                NSString* proposalLibelle = [proposalObject objectForKey:@"libelle"];
+                NSNumber* proposalIdServer = [proposalObject objectForKey:QcmWSAdapter.JSON_ID];
+                NSString* proposalLibelle = [proposalObject objectForKey:QcmWSAdapter.JSON_LIBELLE];
                 
                 proposal.id_server = proposalIdServer;
                 proposal.libelle = proposalLibelle;

@@ -7,8 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "Weather.h"
-#import "WeatherWSAdapter.h"
 #import "CategoryViewController.h"
 #import "UserSqLiteAdapter.h"
 #import "UIView+Toast.h"
@@ -27,15 +25,6 @@ User* usertosend;
     // changer le libelle suivant la langue
     [self.connexionButton setTitle:NSLocalizedString(@"Connexion", nil) forState:UIControlStateNormal];
     
-    void (^callback)(Weather*) = ^(Weather* weather) {
-        idLabel.text = [NSString stringWithFormat:@"%d",weather.idServer];
-        descriptionLabel.text = weather.description;
-        mainLabel.text = weather.main;
-    };
-    
-    
-    WeatherWSAdapter* adapter = [WeatherWSAdapter new];
-    [adapter getWheater:callback];
 }
 
 - (void)didReceiveMemoryWarning {

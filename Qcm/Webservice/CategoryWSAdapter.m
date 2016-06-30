@@ -12,20 +12,19 @@
 
 +(NSString*) JSON_LIBELLE{ return @"libelle";}
 +(NSString*) JSON_ID_SERVER {return @"id";}
-
++(NSString*) BASE_URL{return @"http://192.168.1.39/qcm2/web/app_dev.php/api/categories";}
 -(void) getCategories:(void(^)(NSMutableArray*))callback:(int)user_id{
     
     // Create session
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     
     //Create request
-    NSString* URL = [NSString stringWithFormat:@"http://192.168.1.39/qcm2/web/app_dev.php/api/categories/%d",user_id];
+    NSString* URL = [NSString stringWithFormat:@"%@/%d",CategoryWSAdapter.BASE_URL,user_id];
     [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"JSON : %@",responseObject);
+        // Extract reponse to categories
         NSMutableArray* categories = [self extract:responseObject];
-        
-       // callback(nil);
+
         callback(categories);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Error : %@",error);
@@ -46,8 +45,8 @@
         
         category = [EntityCategory new];
         
-        NSNumber* myid = [cat objectForKey:@"id"];
-        NSString* mylibelle = [cat objectForKey:@"libelle"];
+        NSNumber* myid = [cat objectForKey:CategoryWSAdapter.JSON_ID_SERVER];
+        NSString* mylibelle = [cat objectForKey:CategoryWSAdapter.JSON_LIBELLE];
         
         category.id_server = myid;
         category.libelle = mylibelle;

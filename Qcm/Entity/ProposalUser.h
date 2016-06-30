@@ -10,9 +10,13 @@
 
 @interface ProposalUser : NSObject
 
+// user id
 @property(strong) NSNumber* user_id;
+// qcm id
 @property(strong) NSNumber* qcm_id;
+// question id
 @property(strong) NSNumber* question_id;
+// proposal id
 @property(strong) NSNumber* proposal_id;
 
 @end

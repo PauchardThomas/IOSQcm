@@ -14,4 +14,5 @@
 @property(strong) User* user;
 @property(strong) EntityCategory* category;
 @property(strong) NSArray* categories;
+@property Boolean fromQuestions;
 @end

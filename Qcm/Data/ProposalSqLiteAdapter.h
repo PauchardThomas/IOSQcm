@@ -17,7 +17,6 @@
 +(NSString*) COL_QUESTION;
 +(NSString*) COL_ID_SERVER;
 -(NSManagedObject*)insert:(Proposal*)proposal;
--(void)insert:(Proposal*)proposal withQuestion:(NSManagedObject*)question;
 -(NSArray*) getAll;
 -(NSManagedObject*)getById:(NSManagedObject *)proposal;
 -(NSMutableArray*)getByQuestion:(Question*)question;

@@ -13,6 +13,7 @@
 
 +(NSString*) ENTITY_PROPOSAL{return @"Proposal";}
 +(NSString*) COL_LIBELLE{return @"libelle";}
++(NSString*) COL_ISANSWER{return @"isAnswer";}
 +(NSString*) COL_QUESTION{return @"id_question";}
 +(NSString*) COL_ID_SERVER{return @"id_server";}
 

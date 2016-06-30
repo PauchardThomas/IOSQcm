@@ -15,4 +15,5 @@
 +(NSString*) JSON_USERNAME;
 +(NSString*) JSON_PASSWORD;
 +(NSString*) JSON_ID_SERVER;
++(NSString*) BASE_URL;
 @end

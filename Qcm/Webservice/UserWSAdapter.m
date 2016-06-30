@@ -15,7 +15,7 @@
 +(NSString*) JSON_USERNAME{ return @"username";}
 +(NSString*) JSON_PASSWORD {return @"password";}
 +(NSString*) JSON_ID_SERVER {return @"id_server";}
-
++(NSString*) BASE_URL {return @"http://192.168.1.39/qcm2/web/app_dev.php/api/users";}
 -(User* ) loginuser:(void(^)(User*)) callbackUser:username:password{
     
     // Create session
@@ -25,9 +25,9 @@
     NSLog(@"%@",password);
     
     //Create request
-    NSString* URL = @"http://192.168.1.39/qcm2/web/app_dev.php/api/users";
-    NSDictionary* params = @{@"username": @"admin",
-                             @"password": @"admin"};
+    NSString* URL = UserWSAdapter.BASE_URL;
+    NSDictionary* params = @{@"username": username,
+                             @"password": password};
     AFJSONRequestSerializer *serializer = [AFJSONRequestSerializer serializer];
     [serializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [serializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -38,27 +38,24 @@
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"JSON : %@",responseObject);
-        
+        // Extract response to user
         user = [self extract:responseObject];
-        NSLog(@"test1");
+
         callbackUser(user);
         
         UserSqLiteAdapter* userSqlAdapter = [UserSqLiteAdapter new ];
         NSManagedObject* userMO =[userSqlAdapter getBy:user.username :user.password];
-        NSLog(@"test2");
+
         user = (User*) userMO;
 
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"ERROR : %@ ",error);
-        
-        
     }];
+    
     [manager.operationQueue waitUntilAllOperationsAreFinished];
     
-    NSLog(@"Username : %@ , Password : %@ , id : %@",user.username,user.password,user.id);
     return user;
     
     
@@ -71,8 +68,8 @@
     user = [User new];
     for(NSDictionary* u in json) {
     NSNumber* myid = [u objectForKey:@"id"];
-    NSString* myusername = [u objectForKey:@"username"];
-    NSString* mypassword = [u objectForKey:@"password"];
+    NSString* myusername = [u objectForKey:UserWSAdapter.JSON_USERNAME];
+    NSString* mypassword = [u objectForKey:UserWSAdapter.JSON_PASSWORD];
     
     user.id_server = myid;
     user.username = myusername;

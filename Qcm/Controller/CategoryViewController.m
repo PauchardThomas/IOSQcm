@@ -10,6 +10,7 @@
 #import "CategoryWSAdapter.h"
 #import "CategorySqLiteAdapter.h"
 #import "Category.h"
+#import "UIView+Toast.h"
 #import "QcmTableViewController.h"
 @interface CategoryViewController ()
 {
@@ -18,11 +19,16 @@
 @end
 
 @implementation CategoryViewController
-@synthesize category,categories,user;
+@synthesize category,categories,user,fromQuestions;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationItem setHidesBackButton:YES];
+    
+    if(fromQuestions == YES) {
+        [self.view makeToast:@"Réponses envoyées"];
+    }
     NSLog(@"Username : %@",user.username);
     NSLog(@"Username : %@",user.password);
     

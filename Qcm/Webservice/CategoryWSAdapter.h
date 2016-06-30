@@ -14,6 +14,7 @@
 -(NSMutableArray*) extract:(NSDictionary* )json;
 +(NSString*) JSON_LIBELLE;
 +(NSString*) JSON_ID_SERVER;
++(NSString*) BASE_URL;
 
 
 @end

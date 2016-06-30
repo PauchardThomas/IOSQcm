@@ -120,13 +120,6 @@
     CategorySqLiteAdapter* adapter = [CategorySqLiteAdapter new];
     [adapter insert:cate];*/
     
-    
- /*   WeatherWSAdapter* adapter = [WeatherWSAdapter new];
-    [adapter getWheater:^(Weather * weather) {
-        // on peut enregistre en bdd
-        NSLog(weather.description);
-    }];*/
-    
     return YES;
 }
 

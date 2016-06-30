@@ -31,10 +31,6 @@
     [appDelegate saveContext];
     
     NSManagedObjectID *idInserted = managedObject.objectID;
-    NSLog(@"id inserted  %@: ",idInserted);
-
-    
-    
     
 }
 -(NSArray*) getAll {
