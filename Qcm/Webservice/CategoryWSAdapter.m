@@ -12,7 +12,7 @@
 
 +(NSString*) JSON_LIBELLE{ return @"libelle";}
 +(NSString*) JSON_ID_SERVER {return @"id";}
-+(NSString*) BASE_URL{return @"http://192.168.1.39/qcm2/web/app_dev.php/api/categories";}
++(NSString*) BASE_URL{return @"http://192.168.100.212/qcm2/web/app_dev.php/api/categories";}
 -(void) getCategories:(void(^)(NSMutableArray*))callback:(int)user_id{
     
     // Create session

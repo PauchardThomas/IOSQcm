@@ -17,8 +17,8 @@
 +(NSString*) JSON_DURATION { return @"duration";}
 +(NSString*) JSON_NB_POINTS { return @"nbPoints";}
 +(NSString*) JSON_CATEGORY{ return @"category";}
-+(NSString*) BASE_URL {return @"http://192.168.1.39/qcm2/web/app_dev.php/api/lists";}
-+(NSString*) BASE_URL2 {return @"http://192.168.1.39/qcm2/web/app_dev.php/api/qcms";}
++(NSString*) BASE_URL {return @"http://192.168.100.212/qcm2/web/app_dev.php/api/lists";}
++(NSString*) BASE_URL2 {return @"http://192.168.100.212/qcm2/web/app_dev.php/api/qcms";}
 -(void) getQcms:(void (^)(NSMutableArray *))callbackQcms :(int)category_id {
     
     // Create session

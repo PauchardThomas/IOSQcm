@@ -15,7 +15,7 @@
 +(NSString*) JSON_USERNAME{ return @"username";}
 +(NSString*) JSON_PASSWORD {return @"password";}
 +(NSString*) JSON_ID_SERVER {return @"id_server";}
-+(NSString*) BASE_URL {return @"http://192.168.1.39/qcm2/web/app_dev.php/api/users";}
++(NSString*) BASE_URL {return @"http://192.168.100.212/qcm2/web/app_dev.php/api/users";}
 -(User* ) loginuser:(void(^)(User*)) callbackUser:username:password{
     
     // Create session
@@ -39,6 +39,7 @@
         
         
         // Extract response to user
+
         user = [self extract:responseObject];
 
         callbackUser(user);

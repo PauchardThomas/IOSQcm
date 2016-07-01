@@ -10,6 +10,17 @@
 		EC28B85D1D089D9B007D0E2C /* QcmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC28B85C1D089D9B007D0E2C /* QcmTableViewController.m */; };
 		EC28B8601D08A4F2007D0E2C /* PrevisuQcmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC28B85F1D08A4F2007D0E2C /* PrevisuQcmViewController.m */; };
 		EC7425E51CFB4D620034655F /* UserWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7425E41CFB4D620034655F /* UserWSAdapter.m */; };
+		ECEC8E1A1D2654B00018E46C /* Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E191D2654B00018E46C /* Hash.m */; };
+		ECEC8E1C1D2662F50018E46C /* UserWSAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E1B1D2662F50018E46C /* UserWSAdapterTest.m */; };
+		ECEC8E1F1D2667720018E46C /* CategoryWSAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E1E1D2667720018E46C /* CategoryWSAdapterTest.m */; };
+		ECEC8E211D266AD40018E46C /* QcmWSAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E201D266AD40018E46C /* QcmWSAdapterTest.m */; };
+		ECEC8E251D266F1A0018E46C /* UserSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E241D266F1A0018E46C /* UserSqLiteAdapterTest.m */; };
+		ECEC8E271D26906E0018E46C /* CategorySqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E261D26906E0018E46C /* CategorySqLiteAdapterTest.m */; };
+		ECEC8E291D26955F0018E46C /* QcmSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E281D26955F0018E46C /* QcmSqLiteAdapterTest.m */; };
+		ECEC8E2D1D2699300018E46C /* QuestionSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E2C1D2699300018E46C /* QuestionSqLiteAdapter.m */; };
+		ECEC8E2F1D2699960018E46C /* QuestionSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E2E1D2699960018E46C /* QuestionSqLiteAdapterTest.m */; };
+		ECEC8E311D269B0A0018E46C /* ProposalSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E301D269B0A0018E46C /* ProposalSqLiteAdapterTest.m */; };
+		ECEC8E331D269C730018E46C /* ProposalUserSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E321D269C730018E46C /* ProposalUserSqLiteAdapterTest.m */; };
 		ECED0C821C9037D0001837E3 /* QcmWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */; };
 		ECED0D411C905251001837E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECED0D431C905251001837E3 /* Localizable.strings */; };
 		ECEEA3AB1D1DCB550029122A /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEEA3AA1D1DCB550029122A /* UIView+Toast.m */; };
@@ -39,13 +50,11 @@
 		ECFCF2D01C8DAE2100086129 /* Qcm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2CE1C8DAE2100086129 /* Qcm.xcdatamodeld */; };
 		ECFCF2D21C8DAE2100086129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFCF2D11C8DAE2100086129 /* Assets.xcassets */; };
 		ECFCF2D51C8DAE2100086129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFCF2D31C8DAE2100086129 /* LaunchScreen.storyboard */; };
-		ECFCF2E01C8DAE2200086129 /* QcmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2DF1C8DAE2200086129 /* QcmTests.m */; };
 		ECFCF2FD1C8DB00100086129 /* Qcm.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF2FC1C8DB00100086129 /* Qcm.m */; };
 		ECFCF3101C8DCED000086129 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF30F1C8DCED000086129 /* LoginViewController.m */; };
 		ECFCF31D1C8DDC4800086129 /* CategorySqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3141C8DDC4800086129 /* CategorySqLiteAdapter.m */; };
 		ECFCF31E1C8DDC4800086129 /* ProposalSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3161C8DDC4800086129 /* ProposalSqLiteAdapter.m */; };
 		ECFCF31F1C8DDC4800086129 /* QcmSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3181C8DDC4800086129 /* QcmSqLiteAdapter.m */; };
-		ECFCF3201C8DDC4800086129 /* QuestionSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF31A1C8DDC4800086129 /* QuestionSqLiteAdapter.m */; };
 		ECFCF3211C8DDC4800086129 /* UserSqLiteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF31C1C8DDC4800086129 /* UserSqLiteAdapter.m */; };
 		ECFCF32A1C8DDC9F00086129 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3231C8DDC9F00086129 /* Category.m */; };
 		ECFCF32B1C8DDC9F00086129 /* Proposal.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFCF3251C8DDC9F00086129 /* Proposal.m */; };
@@ -71,6 +80,18 @@
 		EC28B85F1D08A4F2007D0E2C /* PrevisuQcmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrevisuQcmViewController.m; path = Controller/PrevisuQcmViewController.m; sourceTree = "<group>"; };
 		EC7425E31CFB4D620034655F /* UserWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserWSAdapter.h; path = Webservice/UserWSAdapter.h; sourceTree = "<group>"; };
 		EC7425E41CFB4D620034655F /* UserWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserWSAdapter.m; path = Webservice/UserWSAdapter.m; sourceTree = "<group>"; };
+		ECEC8E181D2654B00018E46C /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hash.h; path = Security/Hash.h; sourceTree = "<group>"; };
+		ECEC8E191D2654B00018E46C /* Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hash.m; path = Security/Hash.m; sourceTree = "<group>"; };
+		ECEC8E1B1D2662F50018E46C /* UserWSAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserWSAdapterTest.m; path = Webservices/UserWSAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E1E1D2667720018E46C /* CategoryWSAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryWSAdapterTest.m; path = Webservices/CategoryWSAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E201D266AD40018E46C /* QcmWSAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QcmWSAdapterTest.m; path = Webservices/QcmWSAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E241D266F1A0018E46C /* UserSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSqLiteAdapterTest.m; path = Data/UserSqLiteAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E261D26906E0018E46C /* CategorySqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySqLiteAdapterTest.m; path = Data/CategorySqLiteAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E281D26955F0018E46C /* QcmSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QcmSqLiteAdapterTest.m; path = Data/QcmSqLiteAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E2C1D2699300018E46C /* QuestionSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSqLiteAdapter.m; path = Data/QuestionSqLiteAdapter.m; sourceTree = "<group>"; };
+		ECEC8E2E1D2699960018E46C /* QuestionSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSqLiteAdapterTest.m; path = Data/QuestionSqLiteAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E301D269B0A0018E46C /* ProposalSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProposalSqLiteAdapterTest.m; path = Data/ProposalSqLiteAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E321D269C730018E46C /* ProposalUserSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProposalUserSqLiteAdapterTest.m; path = Data/ProposalUserSqLiteAdapterTest.m; sourceTree = "<group>"; };
 		ECED0C801C9037D0001837E3 /* QcmWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QcmWSAdapter.h; path = Webservice/QcmWSAdapter.h; sourceTree = "<group>"; };
 		ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QcmWSAdapter.m; path = Webservice/QcmWSAdapter.m; sourceTree = "<group>"; };
 		ECED0D3F1C9051E8001837E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -133,7 +154,6 @@
 		ECFCF2D41C8DAE2100086129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECFCF2D61C8DAE2100086129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECFCF2DB1C8DAE2200086129 /* QcmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QcmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECFCF2DF1C8DAE2200086129 /* QcmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QcmTests.m; sourceTree = "<group>"; };
 		ECFCF2E11C8DAE2200086129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECFCF2FB1C8DB00100086129 /* Qcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qcm.h; path = Entity/Qcm.h; sourceTree = "<group>"; };
 		ECFCF2FC1C8DB00100086129 /* Qcm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Qcm.m; path = Entity/Qcm.m; sourceTree = "<group>"; };
@@ -146,7 +166,6 @@
 		ECFCF3171C8DDC4800086129 /* QcmSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QcmSqLiteAdapter.h; path = Data/QcmSqLiteAdapter.h; sourceTree = "<group>"; };
 		ECFCF3181C8DDC4800086129 /* QcmSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QcmSqLiteAdapter.m; path = Data/QcmSqLiteAdapter.m; sourceTree = "<group>"; };
 		ECFCF3191C8DDC4800086129 /* QuestionSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSqLiteAdapter.h; path = Data/QuestionSqLiteAdapter.h; sourceTree = "<group>"; };
-		ECFCF31A1C8DDC4800086129 /* QuestionSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSqLiteAdapter.m; path = Data/QuestionSqLiteAdapter.m; sourceTree = "<group>"; };
 		ECFCF31B1C8DDC4800086129 /* UserSqLiteAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSqLiteAdapter.h; path = Data/UserSqLiteAdapter.h; sourceTree = "<group>"; };
 		ECFCF31C1C8DDC4800086129 /* UserSqLiteAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSqLiteAdapter.m; path = Data/UserSqLiteAdapter.m; sourceTree = "<group>"; };
 		ECFCF3221C8DDC9F00086129 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = Entity/Category.h; sourceTree = "<group>"; };
@@ -179,6 +198,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECEC8E171D26547A0018E46C /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				ECEC8E181D2654B00018E46C /* Hash.h */,
+				ECEC8E191D2654B00018E46C /* Hash.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		ECEC8E1D1D26674D0018E46C /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				ECEC8E1B1D2662F50018E46C /* UserWSAdapterTest.m */,
+				ECEC8E1E1D2667720018E46C /* CategoryWSAdapterTest.m */,
+				ECEC8E201D266AD40018E46C /* QcmWSAdapterTest.m */,
+			);
+			name = Webservice;
+			sourceTree = "<group>";
+		};
+		ECEC8E231D266EF00018E46C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ECEC8E241D266F1A0018E46C /* UserSqLiteAdapterTest.m */,
+				ECEC8E261D26906E0018E46C /* CategorySqLiteAdapterTest.m */,
+				ECEC8E281D26955F0018E46C /* QcmSqLiteAdapterTest.m */,
+				ECEC8E2E1D2699960018E46C /* QuestionSqLiteAdapterTest.m */,
+				ECEC8E301D269B0A0018E46C /* ProposalSqLiteAdapterTest.m */,
+				ECEC8E321D269C730018E46C /* ProposalUserSqLiteAdapterTest.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		ECED0D3E1C90518C001837E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +340,7 @@
 		ECFCF2C11C8DAE2100086129 /* Qcm */ = {
 			isa = PBXGroup;
 			children = (
+				ECEC8E171D26547A0018E46C /* Security */,
 				ECED0D3E1C90518C001837E3 /* Resources */,
 				ECEF45C21C8EC8E20061C1FD /* Webservice */,
 				ECEF458B1C8EC3040061C1FD /* Libs */,
@@ -320,7 +372,8 @@
 		ECFCF2DE1C8DAE2200086129 /* QcmTests */ = {
 			isa = PBXGroup;
 			children = (
-				ECFCF2DF1C8DAE2200086129 /* QcmTests.m */,
+				ECEC8E231D266EF00018E46C /* Data */,
+				ECEC8E1D1D26674D0018E46C /* Webservice */,
 				ECFCF2E11C8DAE2200086129 /* Info.plist */,
 			);
 			path = QcmTests;
@@ -336,7 +389,7 @@
 				ECFCF31B1C8DDC4800086129 /* UserSqLiteAdapter.h */,
 				ECFCF31C1C8DDC4800086129 /* UserSqLiteAdapter.m */,
 				ECFCF3191C8DDC4800086129 /* QuestionSqLiteAdapter.h */,
-				ECFCF31A1C8DDC4800086129 /* QuestionSqLiteAdapter.m */,
+				ECEC8E2C1D2699300018E46C /* QuestionSqLiteAdapter.m */,
 				ECFCF3171C8DDC4800086129 /* QcmSqLiteAdapter.h */,
 				ECFCF3181C8DDC4800086129 /* QcmSqLiteAdapter.m */,
 				ECF40E651D21B48B00078B50 /* ProposalUserSqLiteAdapter.h */,
@@ -504,11 +557,13 @@
 				ECEF45CB1C8F125B0061C1FD /* CategoryWSAdapter.m in Sources */,
 				ECFCF2FD1C8DB00100086129 /* Qcm.m in Sources */,
 				ECFCF3211C8DDC4800086129 /* UserSqLiteAdapter.m in Sources */,
+				ECEC8E2D1D2699300018E46C /* QuestionSqLiteAdapter.m in Sources */,
 				ECEF45A01C8EC4650061C1FD /* AFSecurityPolicy.m in Sources */,
 				ECFCF2C71C8DAE2100086129 /* AppDelegate.m in Sources */,
 				ECEF45A11C8EC4650061C1FD /* AFURLRequestSerialization.m in Sources */,
 				ECEF45BE1C8EC47E0061C1FD /* UIImageView+AFNetworking.m in Sources */,
 				EC7425E51CFB4D620034655F /* UserWSAdapter.m in Sources */,
+				ECEC8E1A1D2654B00018E46C /* Hash.m in Sources */,
 				ECEF459F1C8EC4650061C1FD /* AFNetworkReachabilityManager.m in Sources */,
 				ECEF45A21C8EC4650061C1FD /* AFURLResponseSerialization.m in Sources */,
 				ECED0C821C9037D0001837E3 /* QcmWSAdapter.m in Sources */,
@@ -518,7 +573,6 @@
 				ECF40E641D21B3BC00078B50 /* ProposalUser.m in Sources */,
 				ECEF45BB1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				ECFCF32B1C8DDC9F00086129 /* Proposal.m in Sources */,
-				ECFCF3201C8DDC4800086129 /* QuestionSqLiteAdapter.m in Sources */,
 				EC28B8601D08A4F2007D0E2C /* PrevisuQcmViewController.m in Sources */,
 				ECEF45BD1C8EC47E0061C1FD /* UIButton+AFNetworking.m in Sources */,
 				ECEF45B91C8EC47E0061C1FD /* AFAutoPurgingImageCache.m in Sources */,
@@ -530,7 +584,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECFCF2E01C8DAE2200086129 /* QcmTests.m in Sources */,
+				ECEC8E1C1D2662F50018E46C /* UserWSAdapterTest.m in Sources */,
+				ECEC8E311D269B0A0018E46C /* ProposalSqLiteAdapterTest.m in Sources */,
+				ECEC8E2F1D2699960018E46C /* QuestionSqLiteAdapterTest.m in Sources */,
+				ECEC8E291D26955F0018E46C /* QcmSqLiteAdapterTest.m in Sources */,
+				ECEC8E331D269C730018E46C /* ProposalUserSqLiteAdapterTest.m in Sources */,
+				ECEC8E271D26906E0018E46C /* CategorySqLiteAdapterTest.m in Sources */,
+				ECEC8E251D266F1A0018E46C /* UserSqLiteAdapterTest.m in Sources */,
+				ECEC8E211D266AD40018E46C /* QcmWSAdapterTest.m in Sources */,
+				ECEC8E1F1D2667720018E46C /* CategoryWSAdapterTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

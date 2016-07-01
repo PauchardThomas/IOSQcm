@@ -18,6 +18,7 @@
 +(NSString*) COL_DURATION;
 +(NSString*) COL_NB_POINTS;
 +(NSString*) COL_ID_CATEGORY;
++(NSString*) COL_ID_SERVER;
 
 
 -(void)insert:(Qcm*)qcm;

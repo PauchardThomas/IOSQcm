@@ -13,6 +13,7 @@
 +(NSString*) ENTITY_USER;
 +(NSString*) COL_USERNAME;
 +(NSString*) COL_PASSWORD;
++(NSString*) COL_ID_SERVER;
 
 -(NSManagedObjectID*)insert:(User*)user;
 -(NSArray*) getAll;

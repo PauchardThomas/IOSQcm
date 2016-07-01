@@ -26,6 +26,10 @@ int counter;
     NSLog(@"%@",qcm.libelle);
     NSLog(@"%@",category.libelle);
 
+    [self.navigationItem setHidesBackButton:YES];
+    lbQuestion.lineBreakMode = NSLineBreakByWordWrapping;
+    lbQuestion.numberOfLines = 0;
+    [lbQuestion sizeToFit];
     [_lbQcm setText:qcm.libelle];
     [ _lbUser setText:user.username];
     [ _lbCategory setText:category.libelle];

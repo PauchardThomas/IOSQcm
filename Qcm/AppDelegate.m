@@ -18,6 +18,7 @@
 #import "Proposal.h"
 #import "QuestionSqLiteAdapter.h"
 #import "ProposalSqLiteAdapter.h"
+#import "Hash.h"
 @interface AppDelegate ()
 
 @end
@@ -107,18 +108,13 @@
     CategoryWSAdapter* categoryWSAdatper = [CategoryWSAdapter new];
     [categoryWSAdatper getCategories:callback:5];
     
-    //UserWSAdapter* userdapater = [UserWSAdapter new ];
-    //[userdapater loginuser:callbackUser :@"admin" :@"admin"];
     
     QcmWSAdapter* qcmWSAdapter = [QcmWSAdapter new ];
     [qcmWSAdapter getQcms:callbackQcms :2];
-    //[qcmWSAdapter getQcm:callbackQcm :2];
+
     
-   /* EntityCategory* cate = [EntityCategory new];
-    cate.libelle = @"Ma 1ere cate";
-    cate.id_server = 10;
-    CategorySqLiteAdapter* adapter = [CategorySqLiteAdapter new];
-    [adapter insert:cate];*/
+
+    
     
     return YES;
 }

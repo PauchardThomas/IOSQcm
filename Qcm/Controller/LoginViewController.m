@@ -10,6 +10,7 @@
 #import "CategoryViewController.h"
 #import "UserSqLiteAdapter.h"
 #import "UIView+Toast.h"
+#import "Hash.h"
 @interface LoginViewController ()
 
 @end
@@ -65,8 +66,10 @@ User* usertosend;
         
     };
     
+    Hash* hash = [Hash new];
+    NSString* passwordHashed =[hash hash:PasswordLabel.text];
     UserWSAdapter* userdapater = [UserWSAdapter new ];
-    usertosend =[userdapater loginuser:callbackUser:loginLabel.text:PasswordLabel.text];
+    usertosend =[userdapater loginuser:callbackUser:loginLabel.text:passwordHashed];
     
     
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
@@ -74,7 +77,9 @@ User* usertosend;
     NSLog(@"path is %@",documentDirectory);
     
     UserSqLiteAdapter* usersqlAdapter = [UserSqLiteAdapter new];
-    usertosend =(User*) [usersqlAdapter getBy:loginLabel.text :PasswordLabel.text];
+    Hash* h = [Hash new];
+    NSString* ph =[h hash:PasswordLabel.text];
+    usertosend =(User*) [usersqlAdapter getBy:loginLabel.text :ph];
     if(usertosend == nil) {
         [self.view makeToast:@"Identifiants incorrects"];
         return NO;
@@ -92,7 +97,9 @@ User* usertosend;
 
         usertosend = [User new];
         UserSqLiteAdapter* usersqlAdapter = [UserSqLiteAdapter new];
-        usertosend =(User*) [usersqlAdapter getBy:loginLabel.text :PasswordLabel.text];
+        Hash* hash = [Hash new];
+        NSString* passwordHashed =[hash hash:PasswordLabel.text];
+        usertosend =(User*) [usersqlAdapter getBy:loginLabel.text :passwordHashed];
         CategoryViewController* cc = [segue destinationViewController];
         cc.user = usertosend;
         

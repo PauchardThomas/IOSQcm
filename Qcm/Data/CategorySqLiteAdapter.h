@@ -13,6 +13,7 @@
 
 +(NSString*) ENTITY_CATEGORY;
 +(NSString*) COL_LIBELLE;
++(NSString*) COL_ID_SERVER;
 
 -(void)insert:(EntityCategory*)category;
 -(NSArray*) getAll;

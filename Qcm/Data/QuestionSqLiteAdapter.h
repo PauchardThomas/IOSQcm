@@ -14,6 +14,7 @@
 +(NSString*) COL_LIBELLE;
 +(NSString*) COL_POINTS;
 +(NSString*) COL_ID_QCM;
++(NSString*) COL_ID_SERVER;
 
 -(NSManagedObject*)insert:(Question*)question;
 -(NSArray*) getAll;
