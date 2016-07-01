@@ -21,6 +21,7 @@
 		ECEC8E2F1D2699960018E46C /* QuestionSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E2E1D2699960018E46C /* QuestionSqLiteAdapterTest.m */; };
 		ECEC8E311D269B0A0018E46C /* ProposalSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E301D269B0A0018E46C /* ProposalSqLiteAdapterTest.m */; };
 		ECEC8E331D269C730018E46C /* ProposalUserSqLiteAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E321D269C730018E46C /* ProposalUserSqLiteAdapterTest.m */; };
+		ECEC8E361D26B2780018E46C /* QuestionWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8E351D26B2780018E46C /* QuestionWSAdapter.m */; };
 		ECED0C821C9037D0001837E3 /* QcmWSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */; };
 		ECED0D411C905251001837E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECED0D431C905251001837E3 /* Localizable.strings */; };
 		ECEEA3AB1D1DCB550029122A /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEEA3AA1D1DCB550029122A /* UIView+Toast.m */; };
@@ -92,6 +93,8 @@
 		ECEC8E2E1D2699960018E46C /* QuestionSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSqLiteAdapterTest.m; path = Data/QuestionSqLiteAdapterTest.m; sourceTree = "<group>"; };
 		ECEC8E301D269B0A0018E46C /* ProposalSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProposalSqLiteAdapterTest.m; path = Data/ProposalSqLiteAdapterTest.m; sourceTree = "<group>"; };
 		ECEC8E321D269C730018E46C /* ProposalUserSqLiteAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProposalUserSqLiteAdapterTest.m; path = Data/ProposalUserSqLiteAdapterTest.m; sourceTree = "<group>"; };
+		ECEC8E341D26B2780018E46C /* QuestionWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionWSAdapter.h; path = Webservice/QuestionWSAdapter.h; sourceTree = "<group>"; };
+		ECEC8E351D26B2780018E46C /* QuestionWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionWSAdapter.m; path = Webservice/QuestionWSAdapter.m; sourceTree = "<group>"; };
 		ECED0C801C9037D0001837E3 /* QcmWSAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QcmWSAdapter.h; path = Webservice/QcmWSAdapter.h; sourceTree = "<group>"; };
 		ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QcmWSAdapter.m; path = Webservice/QcmWSAdapter.m; sourceTree = "<group>"; };
 		ECED0D3F1C9051E8001837E3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 				ECED0C811C9037D0001837E3 /* QcmWSAdapter.m */,
 				EC7425E31CFB4D620034655F /* UserWSAdapter.h */,
 				EC7425E41CFB4D620034655F /* UserWSAdapter.m */,
+				ECEC8E341D26B2780018E46C /* QuestionWSAdapter.h */,
+				ECEC8E351D26B2780018E46C /* QuestionWSAdapter.m */,
 			);
 			name = Webservice;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				ECF40E641D21B3BC00078B50 /* ProposalUser.m in Sources */,
 				ECEF45BB1C8EC47E0061C1FD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				ECFCF32B1C8DDC9F00086129 /* Proposal.m in Sources */,
+				ECEC8E361D26B2780018E46C /* QuestionWSAdapter.m in Sources */,
 				EC28B8601D08A4F2007D0E2C /* PrevisuQcmViewController.m in Sources */,
 				ECEF45BD1C8EC47E0061C1FD /* UIButton+AFNetworking.m in Sources */,
 				ECEF45B91C8EC47E0061C1FD /* AFAutoPurgingImageCache.m in Sources */,

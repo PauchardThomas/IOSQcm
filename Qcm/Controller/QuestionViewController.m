@@ -346,7 +346,35 @@ int counter;
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Envoyer les réponses ?" message:@"Message"preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Envoyer" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
-            NSLog(@"Envoyer");
+            
+            ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
+            NSArray* answers = [proposalUserSqLiteAdapter get:user.id_server :qcm.id_server];
+            NSMutableArray* answersObject = [NSMutableArray new];
+            NSMutableDictionary* dicfinal = [NSMutableDictionary new];
+            
+            
+            for(ProposalUser* p in answers){
+                NSMutableDictionary* dic = [NSMutableDictionary new];
+                ProposalUser* prop = [ProposalUser new];
+                prop.user_id = p.user_id;
+                prop.qcm_id = p.qcm_id;
+                prop.question_id = p.question_id;
+                prop.proposal_id = p.proposal_id;
+                
+               
+                [dic setValue:prop.user_id forKey:@"user_id"];
+                [dic setValue:prop.qcm_id forKey:@"qcm_id"];
+                [dic setValue:prop.question_id forKey:@"question_id"];
+                [dic setValue:prop.proposal_id forKey:@"proposal_id"];
+                
+                [answersObject addObject:dic];
+            }
+            
+            
+                                             
+            NSData* jsonData = [NSJSONSerialization dataWithJSONObject:answersObject options:NSJSONWritingPrettyPrinted error:nil];
+            NSString* jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+            NSLog(@"%@",jsonString);
             CategoryViewController* cat = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryView"];
             [self performSegueWithIdentifier:@"questionToCat" sender:@"questionToCat"];
             

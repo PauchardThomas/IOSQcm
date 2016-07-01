@@ -18,5 +18,6 @@
 +(NSString*) COL_PROPOSAL_ID;
 -(void)insert:(ProposalUser*)proposalUser;
 -(void)remove:(ProposalUser*)proposalUser;
+-(NSArray*) get:(NSNumber*)userId:(NSNumber*)qcmId;
 -(NSManagedObject*)getBy:(NSNumber*)userId:(NSNumber*)questionId;
 @end

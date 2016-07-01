@@ -50,6 +50,30 @@
     
     
 }
+-(NSArray*) get:(NSNumber*)userId:(NSNumber*)qcmId{
+   
+    NSArray* answers = [NSArray new];
+    //DB instance
+    AppDelegate* appDelegate = [[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext* context = appDelegate.managedObjectContext;
+    
+    // create filter
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"user_id == %@ AND qcm_id == %@",userId,qcmId];
+    
+    //create query
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:ProposalUserSqLiteAdapter.ENTITY_PROPOSAL_USER];
+    
+    //set filter to query
+    //request.predicate = predicate;
+    [request setPredicate:predicate];
+    
+    //get all answers db object
+    answers = [context executeFetchRequest:request error:nil];
+    
+    return answers;
+    
+    
+}
 -(NSManagedObject*)getBy:(NSNumber*)userId:(NSNumber*)questionId{
     
     //DB instance
