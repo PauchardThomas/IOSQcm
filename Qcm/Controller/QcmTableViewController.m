@@ -37,9 +37,7 @@
     };
     
     
-    //QcmWSAdapter* qcmWSAdatper = [QcmWSAdapter new];
-    //[qcmWSAdatper getQcms:callbackQcm:category.id_server];
-    
+    // Get all Qcms 
     QcmSqLiteAdapter* qcmSqLiteAdapter = [QcmSqLiteAdapter new];
     qcms =[qcmSqLiteAdapter getAll];
     for(Qcm* qcm in qcms) {

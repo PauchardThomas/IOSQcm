@@ -16,11 +16,17 @@
 +(NSString*) COL_ISANSWER;
 +(NSString*) COL_QUESTION;
 +(NSString*) COL_ID_SERVER;
+// Insert proposal
 -(NSManagedObject*)insert:(Proposal*)proposal;
+// Get all proposals
 -(NSArray*) getAll;
+// Get proposal by id
 -(NSManagedObject*)getById:(NSManagedObject *)proposal;
+//Get proposal by question
 -(NSMutableArray*)getByQuestion:(Question*)question;
+// Update proposal
 -(void)update:(NSManagedObject*)managedObject withProposal:(Proposal*)proposal;
+// Remove proposal
 -(void)remove:(NSManagedObject*)managedObject;
 
 @end

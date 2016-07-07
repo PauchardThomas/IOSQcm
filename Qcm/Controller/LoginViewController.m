@@ -66,16 +66,19 @@ User* usertosend;
         
     };
     
+    // Hash password
     Hash* hash = [Hash new];
     NSString* passwordHashed =[hash hash:PasswordLabel.text];
     UserWSAdapter* userdapater = [UserWSAdapter new ];
     usertosend =[userdapater loginuser:callbackUser:loginLabel.text:passwordHashed];
     
-    
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    //DEBUG DB path
+    /*NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
     NSString* documentDirectory = [paths objectAtIndex:0];
-    NSLog(@"path is %@",documentDirectory);
+    NSLog(@"path is %@",documentDirectory);*/
     
+    
+    // Test if ids are corrects
     UserSqLiteAdapter* usersqlAdapter = [UserSqLiteAdapter new];
     Hash* h = [Hash new];
     NSString* ph =[h hash:PasswordLabel.text];
@@ -95,6 +98,8 @@ User* usertosend;
     // Pass the selected object to the new view controller.
     if([[segue identifier] isEqualToString:(@"FromLoginToCategories")]){
 
+        // Send user to categories page
+        
         usertosend = [User new];
         UserSqLiteAdapter* usersqlAdapter = [UserSqLiteAdapter new];
         Hash* hash = [Hash new];

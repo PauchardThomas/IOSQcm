@@ -12,6 +12,7 @@
 #import "ProposalUserSqLiteAdapter.h"
 #import "ProposalUser.h"
 #import "CategoryViewController.h"
+#import "QuestionWSAdapter.h"
 @interface QuestionViewController ()
 
 @end
@@ -26,6 +27,7 @@ int counter;
     NSLog(@"%@",qcm.libelle);
     NSLog(@"%@",category.libelle);
 
+    // Set datas to view
     [self.navigationItem setHidesBackButton:YES];
     lbQuestion.lineBreakMode = NSLineBreakByWordWrapping;
     lbQuestion.numberOfLines = 0;
@@ -36,6 +38,7 @@ int counter;
 
     Qcm* q = (Qcm*)qcm;
 
+    // Parse questions in order to add a counter
     lesQuestions = [NSMutableDictionary new];
     int iter = 1;
     NSNumber *compteur = [NSNumber numberWithInt:iter];
@@ -72,8 +75,8 @@ int counter;
     
     Question* maQuestion = [lesQuestions objectForKey:i];
     
+    // Display first question
     NSString *questionDisplay = [NSString stringWithFormat:@"Question %d : %@",counter,maQuestion.libelle];
-    //lbQuestion.text = question.libelle;
     lbQuestion.text = questionDisplay;
     int j =1;
     ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
@@ -141,6 +144,7 @@ int counter;
 
 
 - (IBAction)sw1:(id)sender {
+    // Insert user answer
     if ([sender isOn]) {
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
@@ -152,7 +156,7 @@ int counter;
         
         
     } else {
-        
+        // Delete user answer
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -164,6 +168,7 @@ int counter;
 }
 
 - (IBAction)sw2:(id)sender {
+    // Insert user answer
     if ([sender isOn]) {
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
@@ -173,6 +178,7 @@ int counter;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         [proposalUserSqLiteAdapter insert:proposalUser];
     } else {
+        // Delete user answer
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -183,6 +189,7 @@ int counter;
     }
 }
 - (IBAction)sw3:(id)sender {
+    // Insert user answer
     if ([sender isOn]) {
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
@@ -192,6 +199,7 @@ int counter;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         [proposalUserSqLiteAdapter insert:proposalUser];
     } else {
+        // Delete user answer
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -202,6 +210,7 @@ int counter;
     }
 }
 - (IBAction)sw4:(id)sender {
+    // Insert user answer
     if ([sender isOn]) {
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
@@ -211,6 +220,7 @@ int counter;
         ProposalUserSqLiteAdapter* proposalUserSqLiteAdapter = [ProposalUserSqLiteAdapter new];
         [proposalUserSqLiteAdapter insert:proposalUser];
     } else {
+        // Delete user answer
         ProposalUser* proposalUser = [ProposalUser new];
         proposalUser.user_id = user.id_server;
         proposalUser.qcm_id = qcm.id_server;
@@ -229,6 +239,7 @@ int counter;
 }
 
 - (IBAction)previous:(id)sender {
+    // Go to the previous question
     if(counter>1){
         counter--;
         i = [NSNumber numberWithInt:counter];
@@ -287,6 +298,7 @@ int counter;
 }
 
 - (IBAction)next:(id)sender {
+    // Go to the next question
     if(counter < [lesQuestions count]){
         [self setTitle:@"Suivant"];
         counter++;
@@ -343,7 +355,7 @@ int counter;
     }else {
         [self.view makeToast:@"On est a la derniere question"];
         [self setTitle:@"Terminer"];
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Envoyer les réponses ?" message:@"Message"preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Envoyer les réponses ?" message:@""preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Envoyer" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
             
@@ -361,20 +373,21 @@ int counter;
                 prop.question_id = p.question_id;
                 prop.proposal_id = p.proposal_id;
                 
-               
-                [dic setValue:prop.user_id forKey:@"user_id"];
-                [dic setValue:prop.qcm_id forKey:@"qcm_id"];
                 [dic setValue:prop.question_id forKey:@"question_id"];
                 [dic setValue:prop.proposal_id forKey:@"proposal_id"];
+                [dic setValue:prop.user_id forKey:@"user_id"];
+                [dic setValue:prop.qcm_id forKey:@"qcm_id"];
+
                 
                 [answersObject addObject:dic];
             }
-            
             
                                              
             NSData* jsonData = [NSJSONSerialization dataWithJSONObject:answersObject options:NSJSONWritingPrettyPrinted error:nil];
             NSString* jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"%@",jsonString);
+            QuestionWSAdapter* questionWSAdapter = [QuestionWSAdapter new];
+            [questionWSAdapter send:jsonString];
             CategoryViewController* cat = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryView"];
             [self performSegueWithIdentifier:@"questionToCat" sender:@"questionToCat"];
             

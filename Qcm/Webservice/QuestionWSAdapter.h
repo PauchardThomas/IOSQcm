@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface QuestionWSAdapter : NSObject
+
+// Send user answers to server
 -(void)send:(NSString*)answers;
+
 @end

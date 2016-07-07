@@ -11,15 +11,24 @@
 
 @interface CategorySqLiteAdapter : NSObject
 
+// Category entity
 +(NSString*) ENTITY_CATEGORY;
+// Category libelle
 +(NSString*) COL_LIBELLE;
+// Category id server
 +(NSString*) COL_ID_SERVER;
 
+// Insert category
 -(void)insert:(EntityCategory*)category;
+// Get all categories
 -(NSArray*) getAll;
+// Get category by id
 -(NSManagedObject*)getById:(NSManagedObject *)category;
+// Get category by id server
 -(NSManagedObject*)getByIdServer:(EntityCategory*)category;
+// Update category
 -(void)update:(NSManagedObject*)managedObject withCategory:(EntityCategory*)category;
+// Delete category
 -(void)remove:(NSManagedObject*)managedObject;
 
 

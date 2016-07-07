@@ -19,6 +19,9 @@
 +(NSString*) JSON_CATEGORY{ return @"category";}
 +(NSString*) BASE_URL {return @"http://192.168.100.212/qcm2/web/app_dev.php/api/lists";}
 +(NSString*) BASE_URL2 {return @"http://192.168.100.212/qcm2/web/app_dev.php/api/qcms";}
+
+// Get Qcms from server
+// Paramter : int category_id
 -(void) getQcms:(void (^)(NSMutableArray *))callbackQcms :(int)category_id {
     
     // Create session
@@ -41,6 +44,8 @@
     
 }
 
+// Get qcm from server
+// Parameter : NSNumber qcm_id
 - (void)getQcm:(void (^)(Qcm *))callbackQcm :(NSNumber*)qcm_id {
     
     // Create session
@@ -62,7 +67,8 @@
     
 }
 
-
+// Extract server response to list of qcms
+// Parameter NSDictionary json
 -(NSMutableArray*) extract:(NSDictionary* )json {
     
      NSMutableArray* qcms = [NSMutableArray new];
@@ -97,6 +103,8 @@
     return qcms;
 }
 
+// Extract Qcm from server response
+// Parameter : NSDictionary json
 -(Qcm*) extractQcm:(NSDictionary* )json {
     Qcm* qcm = [Qcm new];
     for(NSDictionary*q in json){

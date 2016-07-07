@@ -16,6 +16,10 @@
 +(NSString*) JSON_PASSWORD {return @"password";}
 +(NSString*) JSON_ID_SERVER {return @"id_server";}
 +(NSString*) BASE_URL {return @"http://192.168.100.212/qcm2/web/app_dev.php/api/users";}
+
+// Get user from server
+// Parameter : NSString username
+// Parameter : NSString password
 -(User* ) loginuser:(void(^)(User*)) callbackUser:username:password{
     
     // Create session
@@ -62,6 +66,8 @@
     
 }
 
+// Extract user from server response
+// Parameter : NSDictinary json
 -(User*) extract:(NSDictionary* )json {
     
 

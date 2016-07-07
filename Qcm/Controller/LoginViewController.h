@@ -11,6 +11,7 @@
 #import "UserWSAdapter.h"
 @interface LoginViewController : UIViewController
 {
+    // User
     User* user;
 }
 @property (weak, nonatomic) IBOutlet UITextField *loginLabel;

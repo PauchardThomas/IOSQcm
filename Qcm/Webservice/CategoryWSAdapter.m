@@ -13,11 +13,14 @@
 +(NSString*) JSON_LIBELLE{ return @"libelle";}
 +(NSString*) JSON_ID_SERVER {return @"id";}
 +(NSString*) BASE_URL{return @"http://192.168.100.212/qcm2/web/app_dev.php/api/categories";}
+
+// Get categories
+// Parameter : int user_id
 -(void) getCategories:(void(^)(NSMutableArray*))callback:(int)user_id{
     
     // Create session
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
-    
+    manager.securityPolicy.allowInvalidCertificates = YES;
     //Create request
     NSString* URL = [NSString stringWithFormat:@"%@/%d",CategoryWSAdapter.BASE_URL,user_id];
     [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -35,6 +38,7 @@
     
 }
 
+// Extract categories from server response
 -(NSMutableArray*) extract:(NSDictionary* )json {
 
     NSMutableArray* categories = [NSMutableArray new];

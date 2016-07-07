@@ -23,6 +23,7 @@
     NSLog(@"%@",qcm.id_server);
     lbQcm.text = qcm.libelle;
     
+    // Format date to string
     NSDateFormatter* formatter = [NSDateFormatter new];
     [formatter setDateFormat:@"HH:mm:ss"];
     NSString* date=[formatter stringFromDate:qcm.duration];

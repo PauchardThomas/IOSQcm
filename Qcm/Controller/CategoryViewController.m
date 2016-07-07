@@ -26,9 +26,7 @@
     // Do any additional setup after loading the view.
     [self.navigationItem setHidesBackButton:YES];
     
-    if(fromQuestions == YES) {
-        [self.view makeToast:@"Réponses envoyées"];
-    }
+
     NSLog(@"Username : %@",user.username);
     NSLog(@"Username : %@",user.password);
     
@@ -52,12 +50,23 @@
     };
 
     
+    // Get categories from user
     CategoryWSAdapter* categoryWSAdatper = [CategoryWSAdapter new];
-    [categoryWSAdatper getCategories:callback:5];
+    [categoryWSAdatper getCategories:callback:[user.id_server intValue]];
     
+    // Get all categories from db
     CategorySqLiteAdapter* categorySqLiteAdapter = [CategorySqLiteAdapter new];
     categories =[categorySqLiteAdapter getAll];
     
+    if(fromQuestions == 1) {
+       // [self.view makeToast:@"Réponses envoyées"];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Réponses envoyées" message:@""preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *actionBack = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:actionBack];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+
     
 }
 
